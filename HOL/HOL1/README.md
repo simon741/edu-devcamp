@@ -12,14 +12,18 @@ Complete HOL 0 to create a development image with Visual Studio 2017
 ## Exercises
 This hands-on-lab has the following exercises:
 * [Exercise 1: Create a Progressive Web App](#ex1)
-    * [Download the finished PWA solution](#ex1a)
+    * [Set up a basic web app](#ex1a)
+    * [Web App Manifest](#ex1b)
+    * [HTTPS](#ex1c)
+    * [Service Workers](#ex1d)
+    * [Download the finished PWA solution](#ex1e)
 * [Exercise 2: ...](#ex2)
 * [Exercise 3: ...](#ex3)
 ---
 
 ## Exercise 1: Create a Progressive Web App<a name="ex1"></a>
 
-### Set up a basic web app
+### Set up a basic web app<a name="ex1a"></a>
 
 For the sake of simplicity, we'll use the `Visual Studio Node.js and Express app` template to create a basic, localhost web app that serves up an `index.html` page. Imagine this as a placeholder for the compelling, full-featured web app you'll be developing as a PWA.
 
@@ -39,7 +43,7 @@ For the sake of simplicity, we'll use the `Visual Studio Node.js and Express app
 
 Now its time to wire up the basic [PWA requirements](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps#requirements) for your web app: a Web App Manifest, HTTPS and Service Workers.
 
-### Web App Manifest
+### Web App Manifest<a name="ex1b"></a>
 
 A [Web App Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) is a JSON metadata file describing your app, including its name, author, entry page URL, and icon(s). Because it follows a standards-based schema, you need only supply a single web app manifest for your PWA to be installable on any platform / OS / device that supports PWAs. In the Windows ecosystem, your web app manifest signals to the Bing web indexer that your PWA is a candidate for [automatic inclusion in the Microsoft Store](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/microsoft-store), where it can reach nearly 700 million active monthly users as a Windows 10 app.
 
@@ -114,7 +118,7 @@ If this were an existing live site, you could quickly generate a web app manifes
 
 If you publish the app live (with an actual `start_url`), the Bing search engine could now identify it as a candidate for automatic packaging and submission to the Microsoft Store as an installable Windows 10 app. Just make sure that your manifest includes the quality signals for Progressive Web Apps that Bing will be scanning for: `name`, `description`, at least one icon 512px square or larger (to ensure an image source of sufficient resolution for auto-generating you app's splash screen, store listing, tile image, etc.) in addition to being HTTPS, using service workers, complying with [Microsoft Store Policies](https://docs.microsoft.com/en-us/legal/windows/agreements/store-policies).
 
-### HTTPS
+### HTTPS<a name="ex1c"></a>
 
 Service Workers and other key PWA technologies that work with service workers (such as the Cache, Push, and Background Sync APIs) only work across secure connections, which means HTTPS for live sites or localhost for debugging purposes.
 
@@ -122,7 +126,8 @@ If you were to publish this web app as a live site, you'll want to ensure your s
 
 For this moment we'll continue using http://localhost as a placeholder for a live site served over https://.
 
-### Service Workers
+### Service Workers<a name="ex1d"></a>
+
 Service Workers is the key technology behind PWAs. They act as a proxy between your PWA and the network, enabling your website to act as an installed native app: serving up offline scenarios, responding to server push notifications, and running background tasks. Service workers also open up all kinds of new performance strategies; and website need not even be full-blown web app to take advantage of the service worker cache for fine-tuned page load performance.
 
 Service workers are event-driven background threads that run from JavaScript files served up alongside the regular scripts that power your web app. Because they don't run on the main UI thread, service workers don't have DOM access, though the UI thread and a worker thread can communicate using `postMessage()` and `onmessage` event handlers.
@@ -200,7 +205,7 @@ For this tutorial, we'll use a ready-made "Offline page" service worker script c
     If you encounter the error Unable to get property 'controller' of undefined or null reference your Edge version is too old.
 
 ---
-### Download the finished PWA solution<a name="ex1a"></a>
+### Download the finished PWA solution<a name="ex1e"></a>
 If you want to skip this exercise or if you run into any problems you can download the finished solution from the [PWA](./PWA) folder. To start debuging you have to right-click the `npm` node in the Solution Explorer and select `Update npm Packages` first.
 
 ![image](./media/2018-07-17-11-04-00.jpg)
