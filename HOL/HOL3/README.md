@@ -10,7 +10,7 @@ Complete [HOL 0](./../HOL0) to set up demo data in the School Data Sync Admin Po
 ## Exercises
 This hands-on-lab has the following exercises:
 * [Exercise 1: Set up Microsoft Teams](#ex1)
-* [Exercise 2: Create a new team](#ex2)
+* [Exercise 2: Create a new team and a class notebook](#ex2)
 * [Exercise 3: ...](#ex3)
 ---
 
@@ -30,7 +30,29 @@ This hands-on-lab has the following exercises:
     ![image](./media/2018-06-28-13-35-00.jpg)
 
 ---
-## Exercise 2: Create a new team<a name="ex2"></a>
+## Exercise 2: Create a new team and a class notebook<a name="ex2"></a>
+
+1. On the menu on the left click `Teams` and then click the `Create team` button in the center.
+
+    ![image](./media/2018-06-28-15-41-00.jpg)
+
+1. Select `Classes` as the team type.
+
+    ![image](./media/2018-06-28-15-41-30.jpg)
+
+1. Enter a `Name` for your team.
+
+    ![image](./media/2018-06-28-15-42-00.jpg)
+
+1. Find some students by entering a letter in the search box and add them to your team by clicking the names and clicking `Add`.
+
+    ![image](./media/2018-06-28-15-43-00.jpg)
+
+1. Click `Set up Class Notebook`.
+
+    ![image](./media/2018-06-28-15-45-00.jpg)
+
+
 
 ---
 ## Exercise 3: ...<a name="ex3"></a>
