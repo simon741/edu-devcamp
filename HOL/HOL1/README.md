@@ -21,9 +21,9 @@ This hands-on-lab has the following exercises:
 
 ### Set up a basic web app
 
-For the sake of simplicity, we'll use the Visual Studio Node.js and Express app template to create a basic, localhost web app that serves up an `index.html` page. Imagine this as a placeholder for the compelling, full-featured web app you'll be developing as a PWA.
+For the sake of simplicity, we'll use the `Visual Studio Node.js and Express app` template to create a basic, localhost web app that serves up an `index.html` page. Imagine this as a placeholder for the compelling, full-featured web app you'll be developing as a PWA.
 
-1. If you don't have Node.js installed, install the LTS version from the [Node.js](https://nodejs.org/en/download/) website. Download the 64 Bit MSI version and run the setup. Follow the wizard to complete the installation. In general, Visual Studio automatically detects the installed Node.js runtime. If it does not detect an installed runtime, you can configure your project to reference the installed runtime in the properties page (after you create a project, right-click the project node and choose Properties).
+1. If you don't have `Node.js` installed, install the LTS version from the [Node.js](https://nodejs.org/en/download/) website. Download the 64 Bit MSI version and run the setup. Follow the wizard to complete the installation. In general, Visual Studio automatically detects the installed `Node.js` runtime. If it does not detect an installed runtime, you can configure your project to reference the installed runtime in the properties page (after you create a project, right-click the project node and choose `Properties`).
 
 1. Launch Visual Studio, and start a new project (`File` > `New` > `Project...` or press `Ctrl + Shift + N`).
 
