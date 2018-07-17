@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>EduDevCampPWA</Name>
+    <RootNamespace>EduDevCampPWA</RootNamespace>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>21c6a0d4-1dcd-4c40-92ca-da82963db84b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="public\pwabuilder-sw-register.js" />
+    <Compile Include="public\pwabuilder-sw.js" />
+    <Compile Include="routes\index.js" />
+    <Compile Include="routes\users.js" />
+    <Content Include="package.json" />
+    <Content Include="public\images\android\android-launchericon-144-144.png" />
+    <Content Include="public\images\android\android-launchericon-192-192.png" />
+    <Content Include="public\images\android\android-launchericon-48-48.png" />
+    <Content Include="public\images\android\android-launchericon-512-512.png" />
+    <Content Include="public\images\android\android-launchericon-72-72.png" />
+    <Content Include="public\images\android\android-launchericon-96-96.png" />
+    <Content Include="public\images\chrome\chrome-extensionmanagementpage-48-48.png" />
+    <Content Include="public\images\chrome\chrome-favicon-16-16.png" />
+    <Content Include="public\images\chrome\chrome-installprocess-128-128.png" />
+    <Content Include="public\images\firefox\firefox-general-128-128.png" />
+    <Content Include="public\images\firefox\firefox-general-16-16.png" />
+    <Content Include="public\images\firefox\firefox-general-256-256.png" />
+    <Content Include="public\images\firefox\firefox-general-32-32.png" />
+    <Content Include="public\images\firefox\firefox-general-48-48.png" />
+    <Content Include="public\images\firefox\firefox-general-64-64.png" />
+    <Content Include="public\images\firefox\firefox-general-90-90.png" />
+    <Content Include="public\images\firefox\firefox-marketplace-128-128.png" />
+    <Content Include="public\images\firefox\firefox-marketplace-512-512.png" />
+    <Content Include="public\images\ios\ios-appicon-1024-1024.png" />
+    <Content Include="public\images\ios\ios-appicon-120-120.png" />
+    <Content Include="public\images\ios\ios-appicon-152-152.png" />
+    <Content Include="public\images\ios\ios-appicon-180-180.png" />
+    <Content Include="public\images\ios\ios-appicon-76-76.png" />
+    <Content Include="public\images\ios\ios-launchimage-1024-768.png" />
+    <Content Include="public\images\ios\ios-launchimage-1242-2208.png" />
+    <Content Include="public\images\ios\ios-launchimage-1334-750.png" />
+    <Content Include="public\images\ios\ios-launchimage-1536-2048.png" />
+    <Content Include="public\images\ios\ios-launchimage-2048-1536.png" />
+    <Content Include="public\images\ios\ios-launchimage-2208-1242.png" />
+    <Content Include="public\images\ios\ios-launchimage-640-1136.png" />
+    <Content Include="public\images\ios\ios-launchimage-640-960.png" />
+    <Content Include="public\images\ios\ios-launchimage-750-1334.png" />
+    <Content Include="public\images\ios\ios-launchimage-768-1024.png" />
+    <Content Include="public\images\windows10\SplashScreen.scale-100.png" />
+    <Content Include="public\images\windows10\SplashScreen.scale-125.png" />
+    <Content Include="public\images\windows10\SplashScreen.scale-150.png" />
+    <Content Include="public\images\windows10\SplashScreen.scale-200.png" />
+    <Content Include="public\images\windows10\SplashScreen.scale-400.png" />
+    <Content Include="public\images\windows10\Square150x150Logo.scale-100.png" />
+    <Content Include="public\images\windows10\Square150x150Logo.scale-125.png" />
+    <Content Include="public\images\windows10\Square150x150Logo.scale-150.png" />
+    <Content Include="public\images\windows10\Square150x150Logo.scale-200.png" />
+    <Content Include="public\images\windows10\Square150x150Logo.scale-400.png" />
+    <Content Include="public\images\windows10\Square310x310Logo.scale-100.png" />
+    <Content Include="public\images\windows10\Square310x310Logo.scale-125.png" />
+    <Content Include="public\images\windows10\Square310x310Logo.scale-150.png" />
+    <Content Include="public\images\windows10\Square310x310Logo.scale-200.png" />
+    <Content Include="public\images\windows10\Square310x310Logo.scale-400.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.scale-100.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.scale-125.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.scale-150.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.scale-200.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.scale-400.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.targetsize-16.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.targetsize-16_altform-unplated.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.targetsize-24.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.targetsize-256.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.targetsize-256_altform-unplated.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.targetsize-48.png" />
+    <Content Include="public\images\windows10\Square44x44Logo.targetsize-48_altform-unplated.png" />
+    <Content Include="public\images\windows10\Square71x71Logo.scale-100.png" />
+    <Content Include="public\images\windows10\Square71x71Logo.scale-125.png" />
+    <Content Include="public\images\windows10\Square71x71Logo.scale-150.png" />
+    <Content Include="public\images\windows10\Square71x71Logo.scale-200.png" />
+    <Content Include="public\images\windows10\Square71x71Logo.scale-400.png" />
+    <Content Include="public\images\windows10\StoreLogo.png" />
+    <Content Include="public\images\windows10\StoreLogo.scale-100.png" />
+    <Content Include="public\images\windows10\StoreLogo.scale-125.png" />
+    <Content Include="public\images\windows10\StoreLogo.scale-150.png" />
+    <Content Include="public\images\windows10\StoreLogo.scale-200.png" />
+    <Content Include="public\images\windows10\StoreLogo.scale-400.png" />
+    <Content Include="public\images\windows10\Wide310x150Logo.scale-100.png" />
+    <Content Include="public\images\windows10\Wide310x150Logo.scale-125.png" />
+    <Content Include="public\images\windows10\Wide310x150Logo.scale-150.png" />
+    <Content Include="public\images\windows10\Wide310x150Logo.scale-200.png" />
+    <Content Include="public\images\windows10\Wide310x150Logo.scale-400.png" />
+    <Content Include="public\images\windows\windows-smallsquare-24-24.png" />
+    <Content Include="public\images\windows\windows-smallsquare-30-30.png" />
+    <Content Include="public\images\windows\windows-smallsquare-42-42.png" />
+    <Content Include="public\images\windows\windows-smallsquare-54-54.png" />
+    <Content Include="public\images\windows\windows-splashscreen-1116-540.png" />
+    <Content Include="public\images\windows\windows-splashscreen-620-300.png" />
+    <Content Include="public\images\windows\windows-splashscreen-868-420.png" />
+    <Content Include="public\images\windows\windows-squarelogo-120-120.png" />
+    <Content Include="public\images\windows\windows-squarelogo-150-150.png" />
+    <Content Include="public\images\windows\windows-squarelogo-210-210.png" />
+    <Content Include="public\images\windows\windows-squarelogo-270-270.png" />
+    <Content Include="public\images\windows\windows-storelogo-50-50.png" />
+    <Content Include="public\images\windows\windows-storelogo-70-70.png" />
+    <Content Include="public\images\windows\windows-storelogo-90-90.png" />
+    <Content Include="public\images\windows\windowsphone-appicon-106-106.png" />
+    <Content Include="public\images\windows\windowsphone-appicon-44-44.png" />
+    <Content Include="public\images\windows\windowsphone-appicon-62-62.png" />
+    <Content Include="public\images\windows\windowsphone-mediumtile-150-150.png" />
+    <Content Include="public\images\windows\windowsphone-mediumtile-210-210.png" />
+    <Content Include="public\images\windows\windowsphone-mediumtile-360-360.png" />
+    <Content Include="public\images\windows\windowsphone-smalltile-170-170.png" />
+    <Content Include="public\images\windows\windowsphone-smalltile-71-71.png" />
+    <Content Include="public\images\windows\windowsphone-smalltile-99-99.png" />
+    <Content Include="public\images\windows\windowsphone-storelogo-120-120.png" />
+    <Content Include="public\images\windows\windowsphone-storelogo-50-50.png" />
+    <Content Include="public\images\windows\windowsphone-storelogo-70-70.png" />
+    <Content Include="public\manifest.json" />
+    <Content Include="public\offline.html" />
+    <Content Include="public\stylesheets\main.css" />
+    <Content Include="README.md" />
+    <Content Include="views\index.pug" />
+    <Content Include="views\layout.pug" />
+    <Content Include="views\error.pug" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\images\android\" />
+    <Folder Include="public\images\chrome\" />
+    <Folder Include="public\images\firefox\" />
+    <Folder Include="public\images\ios\" />
+    <Folder Include="public\images\windows10\" />
+    <Folder Include="public\images\windows\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
