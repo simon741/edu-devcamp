@@ -12,6 +12,7 @@ Complete HOL 0 to create a development image with Visual Studio 2017
 ## Exercises
 This hands-on-lab has the following exercises:
 * [Exercise 1: Create a Progressive Web App](#ex1)
+    * [Download the finished PWA solution](#ex1a)
 * [Exercise 2: ...](#ex2)
 * [Exercise 3: ...](#ex3)
 ---
@@ -196,7 +197,13 @@ For this tutorial, we'll use a ready-made "Offline page" service worker script c
 
     ![image](./media/2018-07-17-10-45-00.jpg)
 
-If you encounter the error Unable to get property 'controller' of undefined or null reference your Edge version is too old.
+    If you encounter the error Unable to get property 'controller' of undefined or null reference your Edge version is too old.
+
+---
+### Download the finished PWA solution<a name="ex1a"></a>
+If you want to skip this exercise or if you run into any problems you can download the finished solution from the [PWA](./PWA) folder. To start debuging you have to right-click the `npm` node in the Solution Explorer and select `Update npm Packages` first.
+
+![image](./media/2018-07-17-11-04-00.jpg)
 
 ---
 ## Exercise 2: <a name="ex2"></a>
