@@ -224,9 +224,9 @@ If you want to skip this exercise or if you run into any problems you can downlo
 1. ...
 
 ---
-## Continue with lab 2
+## Continue with lab 3
 
-You are now ready to start hands-on lab 2. [View HOL 2 instructions](../HOL2).
+You are now ready to start hands-on lab 3. [View HOL 3 instructions](../HOL3).
 
 ---
 Copyright 2018 Microsoft Corporation. All rights reserved. Except where otherwise noted, these materials are licensed under the terms of the MIT License. You may use them according to the license as is most appropriate for your project. The terms of this license can be found at https://opensource.org/licenses/MIT.
