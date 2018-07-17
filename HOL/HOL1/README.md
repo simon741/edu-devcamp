@@ -11,9 +11,9 @@ Complete HOL 0 to create a development image with Visual Studio 2017
 
 ## Exercises
 This hands-on-lab has the following exercises:
-* [Exercise 1: Set up Office 365 Educational trial subscription](#ex1)
-* [Exercise 2: Set up demo data in the School Data Sync Admin Portal](#ex2)
-* [Exercise 3: Provision resources  via ARM](#ex3)
+* [Exercise 1: Create a Progressive Web App](#ex1)
+* [Exercise 2: ...](#ex2)
+* [Exercise 3: ...](#ex3)
 ---
 
 ## Exercise 1: Create a Progressive Web App<a name="ex1"></a>
@@ -166,34 +166,37 @@ For this tutorial, we'll use a ready-made "Offline page" service worker script c
     </html>
     ```
 
-
     At this point, your public folder should have three new files:
 
     ![image](./media/2018-06-29-16-56-00.jpg)
 
-In Solution Explorer, open the `routes\index.js` file, and add the following code just before the final command (module.exports = router;):
+1. In Solution Explorer, open the `routes\index.js` file, and add the following code just before the final command (module.exports = router;):
 
-    ```JavaScript
+    ```javascript
     router.get('/offline.html', function (req, res) {
         res.sendFile('public/offline.html');
     });
     ```
 
-This instructs your app to serve the offline.html file (when your service worker fetches it for the offline cache).
+    This instructs your app to serve the `offline.html` file (when your service worker fetches it for the offline cache).
 
-Let's test out your PWA! Build (Ctrl+Shift+B) and Run (F5) your web app to launch Microsoft Edge and open your localhost page. Then,
+1. Let's test out your PWA! Build (`Ctrl + Shift + B`) and Run (`F5`) your web app to launch Microsoft Edge and open your localhost page.
 
-    Open the Edge DevTools Console (Ctrl+Shift+J) and verify the Service worker was registered.
+    1. Then, open the Edge DevTools Console (`Ctrl + Shift + J`) and verify the Service worker was registered.
 
-    In the Debugger panel, expand the Service Workers control and click on your origin. In the Service Worker Overview, verify your service worker is activated and running:
+    1. In the `Debugger` panel, expand the `Service Workers` control and click on your origin. In the `Service Worker Overview`, verify your service worker is activated and running:
 
-    Edge DevTools Service Worker overview
+        ![image](./media/2018-07-17-10-43-00.jpg)
 
-    Still in the Debugger, expand the Cache control and verify that the offline.html page has been cached.
+    1. Still in the `Debugger`, expand the `Cache` control and verify that the `offline.html` page has been cached.
 
-    Edge DevTools service worker Cache
+        ![image](./media/2018-07-17-10-44-00.jpg)
 
-Time to try your PWA as an offline app! In Visual Studio, Stop Debugging (Shift+F5) your web app, then open Microsoft Edge (or reload) to your website's localhost address. It should now load the offline.html page (thanks to your service worker and offline cache)!
+1. Time to try your PWA as an offline app! In Visual Studio, Stop debugging (`Shift + F5`) your web app, then open Microsoft Edge (or reload) to your website's localhost address. It should now load the `offline.html` page (thanks to your service worker and offline cache).
+
+    ![image](./media/2018-07-17-10-45-00.jpg)
+
+If you encounter the error Unable to get property 'controller' of undefined or null reference your Edge version is too old.
 
 ---
 ## Exercise 2: <a name="ex2"></a>
