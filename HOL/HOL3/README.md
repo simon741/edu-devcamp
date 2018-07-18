@@ -70,11 +70,15 @@ This hands-on-lab has the following exercises:
 
 ### Create an Assignment
 
-1. ....
+1. Go to the team's `Assignment` tab and click `Create` and `+ New assignment`.
+
+    ![image](./media/2018-07-18-10-23-00.jpg)
+
+1. Enter all required fields and click `Save`.
 
     ![image](./media/2018-06-28-16-03-00.jpg)
 
-1. ....
+1. The assignment has been added to your list of assignments.You can edit it by clicking it.
 
     ![image](./media/2018-06-28-16-05-00.jpg)
 
