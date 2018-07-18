@@ -1,7 +1,7 @@
 # Microsoft Teams
 
 ## Overview
-In this lab, you will set up Microsoft Teams on your system and...
+In this lab, you will set up Microsoft Teams on your system, create your first team and create a custom Teams app hosted in Microsoft Azure.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ Complete [HOL 0](./../HOL0) to set up demo data in the School Data Sync Admin Po
 This hands-on-lab has the following exercises:
 * [Exercise 1: Set up Microsoft Teams](#ex1)
 * [Exercise 2: Create a new team](#ex2)
-* [Exercise 3: ...](#ex3)
+* [Exercise 3: Create a Teams app](#ex3)
 ---
 
 ## Exercise 1: Set up Microsoft Teams<a name="ex1"></a>
@@ -82,10 +82,32 @@ This hands-on-lab has the following exercises:
 
     ![image](./media/2018-06-28-16-05-00.jpg)
 
----
-## Exercise 3: ...<a name="ex3"></a>
+You have manually created an assignment for your class. In a later hands-on-lab you will create assignments automatically.
 
-### Allow external apps
+---
+## Exercise 3: Create a Teams app<a name="ex3"></a>
+
+### Write your app
+
+1. ...
+
+### Host your app in Azure
+
+1. Open Azure Cloud Shell
+
+1. Create a resource group
+
+1. Create an Azure App Service plan
+
+1. Create a web app
+
+1. Deploy ZIP file
+
+1. Browse to the app
+
+### Allow external apps in Teams
+
+You must configure your Office 365 to allow Teams the use of external apps (that you uploaded yourself).
 
 1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome)
  and browse to [portal.office.com](https://portal.office.com) and enter your O365 Global Admin account credentials. 
@@ -116,18 +138,30 @@ This hands-on-lab has the following exercises:
 
     ![image](./media/2018-06-29-10-04-30.jpg)
 
-### Create a ...
+### Create an app manifest file
 
-1. Click `Open` next to...
+App Studio will create the manifest file for your new app. It also provides ready to use controls for your user interface.
+
+1. Click `Open` next to `App`.
 
     ![image](./media/2018-06-29-10-05-00.jpg)
 
+1. Provide details for all fields. Click `Generate` to generate a new App ID. Download the two icon files from the [assets](./assets) folder: [tabapp192.png](./assets/tabapp192.png) and [tabapp32.png](./assets/tabapp32.png). Upload them in the `Branding` section.
+
+    ![image](./media/2018-07-18-11-46-00.jpg)
+
+1. After you have completed the `Details` -> `App details` page click `Capabilities` -> `Tabs` on the left hand menu to go to the next page. Click the `Add` button below `Team tab`.
+
+    ![image](./media/2018-07-18-11-48-00.jpg)
 
 1. ...
 
 1. ...
 
+### Upload and test your new tab
+
 1. ...
+
 
 ---
 ## Continue with lab 4
