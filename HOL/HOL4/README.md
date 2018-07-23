@@ -8,6 +8,7 @@
     * [Server side](#ex2a)
     * [Client side](#ex2b)
 * [Exercise 3: Create a Teams app](#ex3)
+* [Download the finished PWA solution](#download)
 * [Continue with lab 5](#continue)
 
 ---
@@ -174,6 +175,16 @@ Our application is now providing the Application Insights service telemetry data
 ## Exercise 3: Monitor custom events<a name="ex3"></a>
 
 
+
+[Back to top](#content)
+
+---
+
+## Download the finished PWA solution<a name="download"></a>
+
+If you want to skip this hands-on-lab or if you run into any problems you can download the finished solution from the [PWA](./PWA) folder. To start debugging you have to right-click the `npm` node in the Solution Explorer and select `Update npm Packages` first.
+
+![image](./media/2018-07-17-11-04-00.jpg)
 
 [Back to top](#content)
 
