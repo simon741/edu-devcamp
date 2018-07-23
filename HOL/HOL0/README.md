@@ -1,22 +1,34 @@
 # Setup of the Developer Environment
 
-## Overview
+## Content<a name="content"></a>
+* [Overview](#overview)
+* [Prerequisites](#prerequisites)
+* [Before you start](#before)
+* [Exercise 1: Set up Office 365 Educational trial subscription](#ex1)
+* [Exercise 2: Set up demo data in the School Data Sync Admin Portal](#ex2)
+* [Exercise 3: Provision resources  via ARM](#ex3)
+* [Continue with lab 1](#continue)
+
+---
+
+## Overview<a name="overview"></a>
 In this lab, you will set up an Office 365 Educational trial subscription, populate your School Data Sync environment with demo data, and provision resources in the Azure subscription to use for development of further labs.
 
 **This lab is a requirement for the other hands-on labs.**
 
-## Prerequisites
+[Back to top](#content)
 
-You will need a cell phone for identity verification.
-
-## Exercises
-This hands-on-lab has the following exercises:
-* [Exercise 1: Set up Office 365 Educational trial subscription](#ex1)
-* [Exercise 2: Set up demo data in the School Data Sync Admin Portal](#ex2)
-* [Exercise 3: Provision resources  via ARM](#ex3)
 ---
 
-## Before you start
+## Prerequisites<a name="prerequisites"></a>
+
+* You will need a cell phone for identity verification.
+
+[Back to top](#content)
+
+---
+
+## Before you start<a name="before"></a>
 
 > &#x1F53A;If you already have an Office 365 subscription, please **use an alternate browser or use private mode!** This will help avoid any issues with conflicting accounts.
 >
@@ -28,13 +40,18 @@ This hands-on-lab has the following exercises:
 >
 > To register for a free trial use an e-mail address and a phone number that has **not been used for a free trial** yet!&#x1F53A;
 
+[Back to top](#content)
+
 ---
 
 ## Exercise 0: Download GIT repository
 
 1. optional?
 
+[Back to top](#content)
+
 ---
+
 ## Exercise 1: Set up Office 365 Educational trial subscription<a name="ex1"></a>
 
 1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome)
@@ -78,7 +95,10 @@ This hands-on-lab has the following exercises:
 
     ![image](./media/2018-06-28-10-48-00.jpg)
 
+[Back to top](#content)
+
 ---
+
 ## Exercise 2: Set up demo data in the School Data Sync Admin Portal<a name="ex2"></a>
 
 1. Download these CSV files containing the demo data: [School](./assests/School.csv), [Section](./assests/Section.csv), [Student](./assests/Student.csv), [Student Enrollment](./assests/StudentEnrollment.csv), [Teacher](./assests/Teacher.csv) [Teacher Roster](./assests/TeacherRoster.csv). If you have downloaded the Dev Camp content you can find the files in the folder `HOL/HOL0/assets/`.
@@ -119,7 +139,11 @@ This hands-on-lab has the following exercises:
 
     ![image](./media/2018-06-28-11-52-00.jpg)
 
+
+[Back to top](#content)
+
 ---
+
 ## Exercise 3: Provision resources  via ARM<a name="ex3"></a>
 1. ...
 
@@ -127,10 +151,17 @@ This hands-on-lab has the following exercises:
 
 1. ...
 
+
+[Back to top](#content)
+
 ---
-## Continue with lab 1
+
+## Continue with lab 1<a name="continue"></a>
 
 You are now ready to start hands-on lab 1. [View HOL 1 instructions](../HOL1).
 
+[Back to top](#content)
+
 ---
+
 Copyright 2018 Microsoft Corporation. All rights reserved. Except where otherwise noted, these materials are licensed under the terms of the MIT License. You may use them according to the license as is most appropriate for your project. The terms of this license can be found at https://opensource.org/licenses/MIT.
