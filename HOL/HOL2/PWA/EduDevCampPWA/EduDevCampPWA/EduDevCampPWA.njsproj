@@ -34,6 +34,7 @@
     <Compile Include="public\pwabuilder-sw-register.js" />
     <Compile Include="public\pwabuilder-sw.js" />
     <Compile Include="routes\index.js" />
+    <Compile Include="routes\schools.js" />
     <Compile Include="routes\users.js" />
     <Content Include="package.json" />
     <Content Include="public\images\android\android-launchericon-144-144.png" />
@@ -143,9 +144,12 @@
     <Content Include="public\offline.html" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
+    <Content Include="routes\classes.js" />
+    <Content Include="views\classes.pug" />
     <Content Include="views\index.pug" />
     <Content Include="views\layout.pug" />
     <Content Include="views\error.pug" />
+    <Content Include="views\schools.pug" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />

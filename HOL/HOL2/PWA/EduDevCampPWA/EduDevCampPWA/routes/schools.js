@@ -1,10 +1,10 @@
-﻿'use strict';
+'use strict';
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET schools page. */
 router.get('/', function (req, res) {
-    res.render('index', { title: 'Edu DevCamp' });
+    res.render('schools', { title: 'Edu DevCamp - Schools' });
 });
 
 module.exports = router;

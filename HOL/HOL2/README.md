@@ -1,24 +1,37 @@
 # Progressive Web Apps
 
-## Overview
-In this lab, you will set up an Office 365 Educational trial subscription, populate your School Data Sync environment with demo data, and provision resources in the Azure subscription to use for development of further labs.
-
-**This lab is a requirement for the other hands-on labs.**
-
-## Prerequisites
-
-Complete HOL 0 to create a development image with Visual Studio 2017.
-
-## Exercises
-This hands-on-lab has the following exercises:
+## Content<a name="content"></a>
+* [Overview](#overview)
+* [Prerequisites](#prerequisites)
 * [Exercise 1: Create a Progressive Web App](#ex1)
     * [Set up a basic web app](#ex1a)
     * [Web App Manifest](#ex1b)
     * [HTTPS](#ex1c)
     * [Service Workers](#ex1d)
-    * [Download the finished PWA solution](#ex1e)
-* [Exercise 2: ...](#ex2)
+* [Exercise 2: Customize the PWA](#ex2)
 * [Exercise 3: ...](#ex3)
+* [Download the finished PWA solution](#download)
+* [Continue with lab 3](#continue)
+
+---
+
+## Overview<a name="overview"></a>
+
+Intro...
+
+**This lab is a requirement for the other hands-on labs!**
+
+[Back to top](#content)
+
+---
+
+## Prerequisites<a name="prerequisites"></a>
+
+
+* Complete [HOL 0](./../HOL0) to create a development image with Visual Studio 2017.
+
+[Back to top](#content)
+
 ---
 
 ## Exercise 1: Create a Progressive Web App<a name="ex1"></a>
@@ -204,29 +217,153 @@ For this tutorial, we'll use a ready-made "Offline page" service worker script c
 
     If you encounter the error Unable to get property 'controller' of undefined or null reference your Edge version is too old.
 
+[Back to top](#content)
+
 ---
-### Download the finished PWA solution<a name="ex1e"></a>
-If you want to skip this exercise or if you run into any problems you can download the finished solution from the [PWA](./PWA) folder. To start debuging you have to right-click the `npm` node in the Solution Explorer and select `Update npm Packages` first.
+## Exercise 2: Customize the PWA<a name="ex2"></a>
+
+You will add some additional placeholder pages and a simple nav bar to the PWA that will be used in later hands-on-labs.
+
+1. Change the title to `Edu DevCamp`. Open the `routes` -> `index.js` file and change the `title` attribute from `Express` to `Edu DevCamp`.
+
+    ![image](./media/2018-07-23-11-32-00.jpg)
+
+1. Add the two additional pages `schools` and `classes` to the web app. In the Solution Explorer right click on `views` and select `Add` -> `New File...`. Name the file `schools.pug`. Repeat the process and create `classes.pug`.
+
+    ![image](./media/2018-07-23-11-48-00.jpg)
+
+1. Open `schools.pug` and insert this content:
+
+    ```javascript
+    extends layout
+    
+    block content
+      h1= title
+      p This page lists all the managed schools.
+    ```
+
+1. Open `classes.pug` and insert this content:
+
+    ```javascript
+    extends layout
+    
+    block content
+      h1= title
+      p This page lists all the managed classes.
+    ```
+
+1. In the Solution Explorer right click on `routes` and select `Add` -> `New File...`. Name the file `schools.js`. Repeat the process and create `classes.js`.
+
+1. Open `schools.js` and insert this content:
+
+    ```javascript
+    'use strict';
+    var express = require('express');
+    var router = express.Router();
+    
+    /* GET schools page. */
+    router.get('/', function (req, res) {
+        res.render('schools', { title: 'Edu DevCamp - Schools' });
+    });
+    
+    module.exports = router;
+    ```
+
+1. Open `classes.js` and insert this content:
+
+    ```javascript
+    'use strict';
+    var express = require('express');
+    var router = express.Router();
+    
+    /* GET classes page. */
+    router.get('/', function (req, res) {
+      res.render('classes', { title: 'Edu DevCamp - Classes' });
+    });
+    
+    module.exports = router;
+    ```
+
+1. To make the two new pages available, open `app.js` and add:
+
+    ```javascript
+    var schools = require('./routes/schools');
+    var classes = require('./routes/classes');
+    ```
+
+    below:
+
+    ```javascript
+    var users = require('./routes/users');
+    ```
+
+    Also add:
+
+    ```javascript
+    app.use('/schools', schools);
+    app.use('/classes', classes);
+    ```
+
+    below:
+
+    ```javascript
+    app.use('/users', users);
+    ```
+
+1. Create a nav bar to reach the new pages by adding the following code to the end of `views` -> `layout.pug`:
+
+    ```javascript
+        a(href='/') Home
+        |
+        |
+        a(href='/users') Users
+        |
+        |
+        a(href='/schools') Schools
+        |
+        |
+        a(href='/classes') Classes
+        br
+    ```
+
+1. Build (press `Ctrl + Shift + B`) and Start Debugging (`F5`). When you open [http://localhost:1337](http://localhost:1337) you should see your new nav bar in your re-branded PWA and should be able to navigate to the two new pages you have created.
+
+    ![image](./media/2018-07-23-12-40-00.jpg)
+
+[Back to top](#content)
+
+---
+
+## Exercise 3: ...<a name="ex3"></a>
+
+Intro...
+
+1. ...
+
+1. ...
+
+1. ...
+
+[Back to top](#content)
+
+---
+
+## Download the finished PWA solution<a name="download"></a>
+
+If you want to skip this hands-on-lab or if you run into any problems you can download the finished solution from the [PWA](./PWA) folder. To start debugging you have to right-click the `npm` node in the Solution Explorer and select `Update npm Packages` first.
 
 ![image](./media/2018-07-17-11-04-00.jpg)
 
----
-## Exercise 2: <a name="ex2"></a>
-
-
+[Back to top](#content)
 
 ---
-## Exercise 3: <a name="ex3"></a>
-1. ...
 
-1. ...
-
-1. ...
-
----
-## Continue with lab 3
+## Continue with lab 3<a name="continue"></a>
 
 You are now ready to start hands-on lab 3. [View HOL 3 instructions](../HOL3).
 
+[Back to top](#content)
+
 ---
+
 Copyright 2018 Microsoft Corporation. All rights reserved. Except where otherwise noted, these materials are licensed under the terms of the MIT License. You may use them according to the license as is most appropriate for your project. The terms of this license can be found at https://opensource.org/licenses/MIT.
