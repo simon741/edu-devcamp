@@ -1,18 +1,31 @@
 # Monitoring with Application Insights
 
-## Overview
-In this lab, you will set up Microsoft Teams on your system, create your first team and create a custom Teams app hosted in Microsoft Azure.
-
-## Prerequisites
-
-* Complete [HOL 0](./../HOL0) to create a development image with Visual Studio 2017.
-* Complete [HOL 2](./../HOL2) to create a.basic Progressive Web App, or use the [PWA](./../HOL2/PWA) folder from lab 2 without completing it.
-
-## Exercises
-This hands-on-lab has the following exercises:
+## Content<a name="content"></a>
+* [Overview](#overview)
+* [Prerequisites](#prerequisites)
 * [Exercise 1: Create an Application Insights resource](#ex1)
 * [Exercise 2: Create a new team](#ex2)
+    * [Server side](#ex2a)
+    * [Client side](#ex2b)
 * [Exercise 3: Create a Teams app](#ex3)
+* [Continue with lab 5](#continue)
+
+---
+
+## Overview<a name="overview"></a>
+In this lab, you will set up Microsoft Teams on your system, create your first team and create a custom Teams app hosted in Microsoft Azure.
+
+[Back to top](#content)
+
+---
+
+## Prerequisites<a name="prerequisites"></a>
+
+* Complete [HOL 0](./../HOL0) to create a development image with Visual Studio 2017.
+* Complete [HOL 2](./../HOL2) to create a basic Progressive Web App, or use the [PWA](./../HOL2/PWA) folder from lab 2 without completing it.
+
+[Back to top](#content)
+
 ---
 
 ## Exercise 1: Create an Application Insights resource<a name="ex1"></a>
@@ -43,8 +56,10 @@ An instance of Application Insights can be created in a variety of ways, includi
 
 We now have an instance of Application Insights created and ready for data. The Instrumentation Key is important, as it is the link that ties an application to the AI service. 
 
+[Back to top](#content)
 
 ---
+
 ## Exercise 2: Add server and client side SDKs<a name="ex2"></a>
 
 Application Insights works with 2 components:
@@ -53,7 +68,7 @@ Application Insights works with 2 components:
 
 We will add both components to our application and enable the sending of telemetry into the Application Insights service.
 
-### Server side
+### Server side<a name="ex2a"></a>
 
 1. Open the application in Visual Studio. Feel free to use the folder you've been using throughout the hands-on-labs, or use the [PWA](./../HOL2/PWA) folder from lab 2.
 
@@ -94,7 +109,7 @@ We will add both components to our application and enable the sending of telemet
 
 With just two lines of code you added monitoring to your website. Later you will learn to further improve the level of detail by adding custom events.
 
-### Client side
+### Client side<a name="ex2b"></a>
 
 Our server is now sending data, but what about the client side? Let's add the JavaScript library.
 
@@ -152,15 +167,24 @@ Our server is now sending data, but what about the client side? Let's add the Ja
 
 Our application is now providing the Application Insights service telemetry data from both the server and client.
 
+[Back to top](#content)
+
 ---
+
 ## Exercise 3: Monitor custom events<a name="ex3"></a>
 
 
 
+[Back to top](#content)
+
 ---
+
 ## Continue with lab 5
 
 You are now ready to start hands-on lab 5. [View HOL 5 instructions](../HOL5).
 
+[Back to top](#content)
+
 ---
+
 Copyright 2018 Microsoft Corporation. All rights reserved. Except where otherwise noted, these materials are licensed under the terms of the MIT License. You may use them according to the license as is most appropriate for your project. The terms of this license can be found at https://opensource.org/licenses/MIT.
