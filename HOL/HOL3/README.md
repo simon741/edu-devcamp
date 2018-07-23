@@ -1,17 +1,31 @@
 # Microsoft Teams
 
-## Overview
-In this lab, you will set up Microsoft Teams on your system, create your first team and create a custom Teams app hosted in Microsoft Azure.
-
-## Prerequisites
-
-Complete [HOL 0](./../HOL0) to set up demo data in the School Data Sync Admin Portal.
-
-## Exercises
-This hands-on-lab has the following exercises:
+## Content<a name="content"></a>
+* [Overview](#overview)
+* [Prerequisites](#prerequisites)
 * [Exercise 1: Set up Microsoft Teams](#ex1)
 * [Exercise 2: Create a new team](#ex2)
+    * [Create a team](#ex2a)
+    * [Create a Class Notebook](#ex2b)
+    * [Create an Assignment](#ex2c)
 * [Exercise 3: Create a Teams app](#ex3)
+* [Continue with lab 2](#continue)
+
+---
+
+## Overview<a name="overview"></a>
+In this lab, you will set up Microsoft Teams on your system, create your first team and create a custom Teams app hosted in Microsoft Azure.
+
+[Back to top](#content)
+
+---
+
+## Prerequisites<a name="prerequisites"></a>
+
+* Complete [HOL 0](./../HOL0) to set up demo data in the School Data Sync Admin Portal.
+
+[Back to top](#content)
+
 ---
 
 ## Exercise 1: Set up Microsoft Teams<a name="ex1"></a>
@@ -29,10 +43,14 @@ This hands-on-lab has the following exercises:
 
     ![image](./media/2018-06-28-13-35-00.jpg)
 
+
+[Back to top](#content)
+
 ---
+
 ## Exercise 2: Create a new team<a name="ex2"></a>
 
-### Create a team
+### Create a team<a name="ex2a"></a>
 
 1. On the menu on the left click `Teams` and then click the `Create team` button in the center.
 
@@ -50,7 +68,7 @@ This hands-on-lab has the following exercises:
 
     ![image](./media/2018-06-28-15-43-00.jpg)
 
-### Create a Class Notebook
+### Create a Class Notebook<a name="ex2b"></a>
 
 1. Click `Set up Class Notebook`.
 
@@ -68,7 +86,7 @@ This hands-on-lab has the following exercises:
 
     ![image](./media/2018-06-28-15-58-30.jpg)
 
-### Create an Assignment
+### Create an Assignment<a name="ex2c"></a>
 
 1. Go to the team's `Assignment` tab and click `Create` and `+ New assignment`.
 
@@ -84,7 +102,10 @@ This hands-on-lab has the following exercises:
 
 You have manually created an assignment for your class. In a later hands-on-lab you will create assignments automatically.
 
+[Back to top](#content)
+
 ---
+
 ## Exercise 3: Create a Teams app<a name="ex3"></a>
 
 ### Write your app
@@ -93,13 +114,32 @@ You have manually created an assignment for your class. In a later hands-on-lab 
 
 ### Host your app in Azure
 
-1. Open Azure Cloud Shell
+You need the Azure trial subscription created in HOL 0.
 
-1. Create a resource group
+ARM Script to create app? Besser alles von Hand machen. DEV VM: Visual Studio Community 2017 on Windows 10 Enterprise N (x64)
 
-1. Create an Azure App Service plan
+Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run this sample. You can quickly host your app using the Azure Cloud Shell found on the Microsoft Azure Dashboard.
 
-1. Create a web app
+1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome)
+ and browse to [teams.microsoft.com](https://portal.azure.com/). Select the `Cloud Shell` button on the menu in the upper-right corner of the Azure portal. This will open the Cloud Shell at the bottom of the screen.
+
+    ![image](./media/2018-07-18-12-36-00.jpg)
+
+1. A resource group is a logical container into which Azure resources like web apps, databases, and storage accounts are deployed and managed. In the Cloud Shell, create a resource group with the command below. The command creates a resource group named `eduDevCampResourceGroup` in the West Europe location. To see all supported locations for App Service in `Free` tier, run the `az appservice list-locations --sku FREE` command. You generally create your resource group and the resources in a region near you. 
+
+    `
+    az group create --name eduDevCampResourceGroup --location "West Europe"
+    `
+
+    When the command finishes, a JSON output shows you the resource group properties.
+
+1. In the Cloud Shell, create an App Service plan with the command below.
+
+    `
+    az appservice plan create --name eduDevCampAppServicePlan --resource-group eduDevCampResourceGroup --sku FREE
+    `
+
+1. In the Cloud Shell, create a web app in the myAppServicePlan App Service plan with the az webapp create command. 
 
 1. Deploy ZIP file
 
@@ -146,6 +186,10 @@ App Studio will create the manifest file for your new app. It also provides read
 
     ![image](./media/2018-06-29-10-05-00.jpg)
 
+1. On the welcome screen click `Create a new app`.
+
+    ![image](./media/2018-06-29-10-08-00.jpg)
+
 1. Provide details for all fields. Click `Generate` to generate a new App ID. Download the two icon files from the [assets](./assets) folder: [tabapp192.png](./assets/tabapp192.png) and [tabapp32.png](./assets/tabapp32.png). Upload them in the `Branding` section.
 
     ![image](./media/2018-07-18-11-46-00.jpg)
@@ -162,11 +206,16 @@ App Studio will create the manifest file for your new app. It also provides read
 
 1. ...
 
+[Back to top](#content)
 
 ---
-## Continue with lab 4
+
+## Continue with lab 4<a name="continue"></a>
 
 You are now ready to start hands-on lab 4. [View HOL 4 instructions](../HOL4).
 
+[Back to top](#content)
+
 ---
+
 Copyright 2018 Microsoft Corporation. All rights reserved. Except where otherwise noted, these materials are licensed under the terms of the MIT License. You may use them according to the license as is most appropriate for your project. The terms of this license can be found at https://opensource.org/licenses/MIT.
