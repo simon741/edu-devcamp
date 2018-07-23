@@ -9,7 +9,7 @@
     * [Create a Class Notebook](#ex2b)
     * [Create an Assignment](#ex2c)
 * [Exercise 3: Create a Teams app](#ex3)
-* [Continue with lab 2](#continue)
+* [Continue with lab 4](#continue)
 
 ---
 
