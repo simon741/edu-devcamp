@@ -7,7 +7,7 @@ In this lab, you will set up an Office 365 Educational trial subscription, popul
 
 ## Prerequisites
 
-Complete HOL 0 to create a development image with Visual Studio 2017
+Complete HOL 0 to create a development image with Visual Studio 2017.
 
 ## Exercises
 This hands-on-lab has the following exercises:
