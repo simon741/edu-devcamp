@@ -1,16 +1,27 @@
 # Explore School Data Sync data
 
-## Overview
+## Content<a name="content"></a>
+* [Overview](#overview)
+* [Prerequisites](#prerequisites)
+* [Exercise 1: Using SDS portal](#ex1)
+* [Exercise 2: Using Graph Explorer](#ex2)
+* [Continue with lab 2](#continue)
+
+---
+
+## Overview<a name="overview"></a>
 In this lab, you will explore your School Data Sync demo data using web interfaces. You will learn about the Graph API which you can use to create applications that utilize the API to read and modify the data.
 
-## Prerequisites
+[Back to top](#content)
+
+---
+
+## Prerequisites<a name="prerequisites"></a>
 
 Complete [HOL 0](./../HOL0) to set up demo data in the School Data Sync Admin Portal.
 
-## Exercises
-This hands-on-lab has the following exercises:
-* [Exercise 1: Using SDS portal](#ex1)
-* [Exercise 2: Using Graph Explorer](#ex2)
+[Back to top](#content)
+
 ---
 
 ## Exercise 1: Using SDS portal<a name="ex1"></a>
@@ -39,7 +50,10 @@ In the previous hands-on-lab you created a sync to upload sample data to your Sc
 
     ![image](./media/2018-07-17-13-16-00.jpg)
 
+[Back to top](#content)
+
 ---
+
 ## Exercise 2: Using Graph Explorer<a name="ex2"></a>
 
 When you want to utilize your data within your own applications you use the Microsoft Graph API. Microsoft provides the online Graph Explorer so you can test the queries to the API before you implement them in your application.
@@ -70,10 +84,16 @@ When you want to utilize your data within your own applications you use the Micr
 
     Using the API it is possible to read and write roster information and even management of the School Data Sync.
 
+[Back to top](#content)
+
 ---
+
 ## Continue with lab 2
 
 You are now ready to start hands-on lab 2. [View HOL 2 instructions](../HOL2).
 
+[Back to top](#content)
+
 ---
+
 Copyright 2018 Microsoft Corporation. All rights reserved. Except where otherwise noted, these materials are licensed under the terms of the MIT License. You may use them according to the license as is most appropriate for your project. The terms of this license can be found at https://opensource.org/licenses/MIT.
