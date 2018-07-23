@@ -88,7 +88,7 @@ When you want to utilize your data within your own applications you use the Micr
 
 ---
 
-## Continue with lab 2
+## Continue with lab 2<a name="continue"></a>
 
 You are now ready to start hands-on lab 2. [View HOL 2 instructions](../HOL2).
 
