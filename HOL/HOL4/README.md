@@ -65,9 +65,9 @@ Application Insights works with a server side SDK that integrates into the NodeJ
 
 1. Open the application in Visual Studio. Feel free to use the folder you've been using throughout the hands-on-labs, or use the [PWA](./../HOL2/PWA) folder from lab 2.
 
-1. Microsoft publishes an SDK for AppInsights on NodeJS on [GitHub](https://github.com/Microsoft/ApplicationInsights-node.js). This SDK can be installed in your project via the Visual Studio.package management console.
+1. Microsoft publishes an SDK for AppInsights on NodeJS on [GitHub](https://github.com/Microsoft/ApplicationInsights-node.js). This SDK can be installed in your project via the Visual Studio package management console.
 
-    Open the package management console (`View` -> `Other Windows` -> `Package Manager Console`), switch to the solution directory install the npm package:
+    Open the package management console (`View` -> `Other Windows` -> `Package Manager Console`), switch to the solution directory and install the npm package `applicationinsights`:
 
     ```javascript
     cd EduDevCampPWA
