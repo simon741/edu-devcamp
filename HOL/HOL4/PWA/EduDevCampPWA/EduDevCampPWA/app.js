@@ -17,6 +17,13 @@ var app = express();
 let appInsights = require("applicationinsights");
 appInsights.setup("3a51695a-9f9f-4d39-a86e-1e49308e4e68").start();
 
+appInsights.defaultClient.commonProperties = {
+    userLoggedIn: true,
+    userIsTeacher: false
+};
+appInsights.defaultClient.trackEvent({ name: "onClick" });
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

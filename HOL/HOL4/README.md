@@ -4,10 +4,8 @@
 * [Overview](#overview)
 * [Prerequisites](#prerequisites)
 * [Exercise 1: Create an Application Insights resource](#ex1)
-* [Exercise 2: Create a new team](#ex2)
-    * [Server side](#ex2a)
-    * [Client side](#ex2b)
-* [Exercise 3: Create a Teams app](#ex3)
+* [Exercise 2: Add the Application Insight SDK](#ex2)
+* [Exercise 3: Advanced tracking and monitoring custom events](#ex3)
 * [Download the finished PWA solution](#download)
 * [Continue with lab 5](#continue)
 
@@ -61,15 +59,9 @@ We now have an instance of Application Insights created and ready for data. The 
 
 ---
 
-## Exercise 2: Add server and client side SDKs<a name="ex2"></a>
+## Exercise 2: Add the Application Insight SDK<a name="ex2"></a>
 
-Application Insights works with 2 components:
-1. A server side SDK that integrates into the NodeJS (or other web technologies) processes.
-2. A snippet of JavaScript sent down to the client's browser to monitor behavior.
-
-We will add both components to our application and enable the sending of telemetry into the Application Insights service.
-
-### Server side<a name="ex2a"></a>
+Application Insights works with a server side SDK that integrates into the NodeJS (or other web technologies) processes. We will add the SDK to our application and enable the sending of telemetry into the Application Insights service.
 
 1. Open the application in Visual Studio. Feel free to use the folder you've been using throughout the hands-on-labs, or use the [PWA](./../HOL2/PWA) folder from lab 2.
 
@@ -105,76 +97,69 @@ We will add both components to our application and enable the sending of telemet
 
 1. Back in the Azure Portal, refresh the browser tab (or click `Refresh` from the top toolbar) until you see data appear.
 
+    ![image](./media/2018-07-24-10-27-00.jpg)
 
     > It may take 3-5 minutes for data to appear even when manually refreshing.
 
 With just two lines of code you added monitoring to your website. Later you will learn to further improve the level of detail by adding custom events.
 
-### Client side<a name="ex2b"></a>
-
-Our server is now sending data, but what about the client side? Let's add the JavaScript library.
-
-1. In the portal, click the tile that says `Learn how to collect browser page load data`: 
-    
-
-
-1. The next blade will give you a JavaScript snippet pre-loaded with the Instrumentation Key. This snippet, when placed on an HTML page, will download the full Application Insights JavaScript library and configure itself. Click the clipboard icon to copy the snippet.
-
-
-
-1. Let's integrate the snippet into our web pages. Create a new file at `views/appInsights.html` and paste in the snippet and insert your own instrumentation key.
-
-    ```html
-    <!-- 
-    To collect end-user usage analytics about your application, 
-    insert the following script into each page you want to track.
-    Place this code immediately before the closing </head> tag,
-    and before any other scripts. Your first data will appear 
-    automatically in just a few seconds.
-    -->
-    <script type="text/javascript">
-    var appInsights=window.appInsights||function(config){
-        function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
-        }({
-            instrumentationKey:"2fd01fb1-d6cb-4c2f-9244-171989d2ac67"
-        });
-        
-        window.appInsights=appInsights;
-        appInsights.trackPageView();
-    </script>
-    ```
-
-1. Now update `views/layout.pug` with an `include` for the new `appInsights.html` file before the end of the `head` block:
-
-    ```pug
-    doctype html
-    html
-      head
-        title= title
-        link(rel='stylesheet', href='/stylesheets/main.css')
-        link(rel='manifest', href='/manifest.json')
-        script(src='/pwabuilder-sw-register.js')
-        // Application Insights
-        include appInsights.html
-      body
-        block content
-    ```
-
-    > In a real world scenario we may not wish to mix `.html` and `.pug` files in our views, however for a lab it can be difficult to copy/paste/troubleshoot pug snippets.
-
-1. Redeploy the application and load several pages to generate more sample telemetry. The Azure Portal should now light up data for **Page View Load Time**:
-
-
-
-Our application is now providing the Application Insights service telemetry data from both the server and client.
-
-[Back to top](#content)
+When you are creating an ASP.NET web application hosted in Azure you can simply activate monitoring via the Azure UI and don't have to change your code at all.
 
 ---
 
-## Exercise 3: Monitor custom events<a name="ex3"></a>
+## Exercise 3: Advanced tracking and monitoring custom events<a name="ex3"></a>
 
+You can use the `Metric Explorer` to create custom views on the gathered data. Application Insights allows you to use many advanced tracking options. For example you can track custom events and add custom properties to the tracked data.
 
+1. Modify the `app.js` file. Below:
+
+    ```javascript
+    appInsights.setup("YOUR_I_KEY").start();
+    ```
+
+    add:
+
+    ```javascript
+    appInsights.defaultClient.commonProperties = {
+        userLoggedIn: true,
+        userIsTeacher: false
+    };
+    appInsights.defaultClient.trackEvent({ name: "onClick" });
+    ```
+    
+    The first part will add two custom properties to the tracked data (in a real world scenario you would use them to track if the current visitor is a login user and if it is a teacher or not). The second part will cause `onClick` events to be tracked.
+
+1. Modify the `views` -> `index.pug` and add this `onClick` event that we will use to test the advanced tracking at the end of the file:
+
+    ```javascript
+      p(onclick="alert('test');")= "Click to cause an event"
+    ```
+
+1. Run your application and click the `Click to cause an event` text.
+
+    ![image](./media/2018-07-24-11-22-00.jpg)
+
+1. Back in the Azure Portal open the `Metric Explorer` and click `edit` on the empty chart (if you don't have an empty chart, click `Add chart`).
+
+    ![image](./media/2018-07-24-11-57-00.jpg)
+
+1. Select `Events` from the list of Metrics.
+
+    ![image](./media/2018-07-24-12-02-00.jpg)
+
+1. As soon as you do you see a bar chart listing all custom events. Click the bar chart to open the search page.
+
+    ![image](./media/2018-07-24-12-09-00.jpg)
+
+1. Click the first custom event in the result list to see the details.
+
+    ![image](./media/2018-07-24-12-11-00.jpg)
+
+1. Note the custom data that you defined previously.
+
+    ![image](./media/2018-07-24-10-51-00.jpg)
+
+This was a short introduction into tracking using the Application Insights SDK and the `Metric Explorer`. See [docs.microsoft.com/en-us/azure/application-insights/app-insights-api-custom-events-metrics](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-api-custom-events-metrics) for additional tracking options.
 
 [Back to top](#content)
 
