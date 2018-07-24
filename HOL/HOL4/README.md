@@ -37,21 +37,26 @@ An instance of Application Insights can be created in a variety of ways, includi
 
 1. Open the Resource Group that was originally deployed. Click `Add` on the top toolbar to add a new Azure resource to this group.
 
+    ![image](./media/2018-07-24-13-37-00.jpg)
 
 1. Search for `Application Insights` and select the entry from the results list:
 
-
+    ![image](./media/2018-07-24-13-38-00.jpg)
 
 1. In the overview blade that opens, click `Create` to open the creation settings blade. Enter a name, configure `Application Type` to `Node.js Web Application` and then click the `Create` button.
 
+    ![image](./media/2018-07-24-13-49-00.jpg)
+
+    ![image](./media/2018-07-24-13-50-00.jpg)
+    
     Creation typically takes less than a minute.
 
 
 1. Once provisioning completes, return to your Resource Group and open the resource. You may need to hit the refresh button within the resource group blade.
 
+1. In the `Essentials` section, take note of the `Instrumentation Key`. We will need that in future exercises.
 
-1.  In the `Essentials` section, take note of the `Instrumentation Key`. We will need that in future exercises.
-
+    ![image](./media/2018-07-24-13-53-00.jpg)
 
 We now have an instance of Application Insights created and ready for data. The Instrumentation Key is important, as it is the link that ties an application to the AI service. 
 
