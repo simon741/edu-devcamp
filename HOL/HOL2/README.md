@@ -42,6 +42,16 @@ For the sake of simplicity, we'll use the `Visual Studio Node.js and Express app
 
 1. If you don't have `Node.js` installed, install the LTS version from the [Node.js](https://nodejs.org/en/download/) website. Download the 64 Bit MSI version and run the setup. Follow the wizard to complete the installation. In general, Visual Studio automatically detects the installed `Node.js` runtime. If it does not detect an installed runtime, you can configure your project to reference the installed runtime in the properties page (after you create a project, right-click the project node and choose `Properties`).
 
+    If you are not allowed to download files in the freshly deployed development virtual machine follow these instructions:
+
+    1. Open Internet Explorer.
+    1. From the `Tools` menu, select `Internet Options`.
+    1. In the `Internet Options` dialog box, click the `Security` tab.
+    1. Click `Custom Level`.
+    1. In the `Security Settings` dialog box, scroll to the `Downloads` section.
+    1. Under `File download`, select `Enable`, and then click `OK`.
+    1. In the confirmation dialog box, click `Yes`.
+
 1. Launch Visual Studio, and start a new project (`File` > `New` > `Project...` or press `Ctrl + Shift + N`).
 
     ![image](./media/2018-06-29-13-22-00.jpg)
