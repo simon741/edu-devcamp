@@ -82,6 +82,8 @@ When you want to utilize your data within your own applications you use the Micr
 
 1. Try more queries. You can find the API reference and more example queries at [developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/education-overview](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/education-overview).
 
+	Query `https://graph.microsoft.com/beta/education/classes/f84c1c46-c0e2-4ec7-9993-f16246bb0102/members/` to get a list of students in the `Biology 2` class.
+
     Using the API it is possible to read and write roster information and even management of the School Data Sync.
 
 [Back to top](#content)
