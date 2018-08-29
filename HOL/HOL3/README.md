@@ -8,7 +8,8 @@
     * [Create a team](#ex2a)
     * [Create a Class Notebook](#ex2b)
     * [Create an Assignment](#ex2c)
-* [Exercise 3: Create a Teams app](#ex3)
+* [Exercise 3: View demo data as teacher and student](#ex3)
+* [Exercise 4: Create a Teams app](#ex4)
 * [Continue with lab 4](#continue)
 
 ---
@@ -106,7 +107,62 @@ You have manually created an assignment for your class. In a later hands-on-lab 
 
 ---
 
-## Exercise 3: Create a Teams app<a name="ex3"></a>
+## Exercise 3: View demo data as teacher and student<a name="ex3"></a>
+To see the demo data you created in [HOL 0](./../HOL0) you have to use Teams as one of the created users that have classes assigned to them. Please be aware that classes will be added to teams and are visible to students as soon as a teacher for that class logs into teams. To log in as a teacher or student you will reset their passwords.
+
+1. Launch a private web browser, navigate to [admin.microsoft.com/AdminPortal](https://admin.microsoft.com/AdminPortal/) and sign in using your O365 Global Admin account credentials. Click `Users`.
+
+    ![image](./media/2018-08-29-13-01-00.jpg)
+
+1. Click `Active users`.
+
+    ![image](./media/2018-08-29-13-04-00.jpg)
+
+1. `Bill Sluss` teaches the `Technology - Programming 2` class. Click his name.
+
+    ![image](./media/2018-08-29-13-08-00.jpg)
+
+1. Click `Reset password`.
+
+    ![image](./media/2018-08-29-13-20-00.jpg)
+
+1. Select `Let me create the password` and remove the tick mark from `Make this user change their password when they first sign in`. Enter a password of your choice and click `Reset`.
+
+    ![image](./media/2018-08-29-13-22-00.jpg)
+
+1. Return to the list of active users and repeat the process for one of Bill's students in the `Technology - Programming 2` class: `Jane Doe`.
+
+    ![image](./media/2018-08-29-13-26-00.jpg)
+
+1. Start the Teams client. Click the initials of the logged in user in the upper right corner and select `Sign out`.
+
+    ![image](./media/2018-08-29-13-27-00.jpg)
+
+1. Teams will automatically restart and display the login dialog. Login as `Bill Sluss` (`billsluss@yourdomain.onmicrosoft.com`) using the password you just set for him.
+
+    ![image](./media/2018-08-29-13-29-00.jpg)
+
+1. Note the classes in the list of teams that Bill teaches. Select `Technology - Programming 2` and create a new assignment.
+
+    ![image](./media/2018-08-29-13-31-00.jpg)
+
+    ![image](./media/2018-08-29-13-36-00.jpg)
+
+    ![image](./media/2018-08-29-13-39-00.jpg)
+
+1. Log out and log in again as `Jane Doe` (`jdoe@yourdomain.onmicrosoft.com`).
+
+    ![image](./media/2018-08-29-13-46-00.jpg)
+
+1. Note that the `Technology - Programming 2` class and the assignment show up for the student.
+
+    ![image](./media/2018-08-29-13-48-00.jpg)
+
+[Back to top](#content)
+
+---
+
+## Exercise 4: Create a Teams app<a name="ex4"></a>
 
 ### Write your app
 

@@ -41,7 +41,8 @@
     * [Create a team](HOL3/#ex2a)
     * [Create a Class Notebook](HOL3/#ex2b)
     * [Create an Assignment](HOL3/#ex2c)
-* [Exercise 3: Create a Teams app](HOL3/#ex3)
+* [Exercise 3: View demo data as teacher and student](HOL3/#ex3)
+* [Exercise 4: Create a Teams app](HOL3/#ex4)
 
 ---
 ## HOL 4 - Monitoring with Application Insights
