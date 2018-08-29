@@ -6,7 +6,7 @@
 * [Before you start](#before)
 * [Exercise 1: Set up Office 365 Educational trial subscription](#ex1)
 * [Exercise 2: Set up demo data in the School Data Sync Admin Portal](#ex2)
-* [Exercise 3: Provision resources  via ARM](#ex3)
+* [Exercise 3: Set up Azure free trial subscription](#ex3)
 * [Continue with lab 1](#continue)
 
 ---
@@ -144,13 +144,25 @@ In this lab, you will set up an Office 365 Educational trial subscription, popul
 
 ---
 
-## Exercise 3: Provision resources  via ARM<a name="ex3"></a>
-1. ...
+## Exercise 3: Set up Azure free trial subscription<a name="ex3"></a>
+The 30 day Azure free trial will be used in the hands-on labs to host content in Azure like the Progressive Web App or the Teams apps.
 
-1. ...
+1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome)
+ and browse to [azure.microsoft.com/en-us/free](https://azure.microsoft.com/en-us/free/?ref=portal) and click the `Start free` button.
 
-1. ...
+    ![image](./media/2018-07-18-15-41-30.jpg)
 
+1. Complete the form and be sure to use the e-mail address you created in [Exercise 1](#ex1) for your Office 365 Educational trial subscription. Click `Next`.
+
+    ![image](./media/2018-07-18-15-43-00.jpg)
+
+1. Enter your phone number and click `Text me`. Enter the verification code that you receive via SMS and click `Verify code`.
+
+    ![image](./media/2018-08-16-08-55-00.jpg)
+
+1. Enter your credit card details for additional verification. You credit card will **not** be charged. Agree to the terms and conditions and click `Sign up`.
+
+    ![image](./media/2018-08-16-09-02-00.jpg)
 
 [Back to top](#content)
 

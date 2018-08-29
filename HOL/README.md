@@ -7,7 +7,7 @@
 * [Before you start](HOL0/#before)
 * [Exercise 1: Set up Office 365 Educational trial subscription](HOL0/#ex1)
 * [Exercise 2: Set up demo data in the School Data Sync Admin Portal](HOL0/#ex2)
-* [Exercise 3: Provision resources  via ARM](HOL0/#ex3)
+* [Exercise 3: Set up Azure free trial subscription](HOL0/#ex3)
 
 ---
 ## HOL 1 - Explore School Data Sync data
