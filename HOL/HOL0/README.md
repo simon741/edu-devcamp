@@ -7,6 +7,7 @@
 * [Exercise 1: Set up Office 365 Educational trial subscription](#ex1)
 * [Exercise 2: Set up demo data in the School Data Sync Admin Portal](#ex2)
 * [Exercise 3: Set up Azure free trial subscription](#ex3)
+* [Exercise 4: Provision a virtual machine for development](#ex4)
 * [Continue with lab 1](#continue)
 
 ---
@@ -163,6 +164,69 @@ The 30 day Azure free trial will be used in the hands-on labs to host content in
 1. Enter your credit card details for additional verification. You credit card will **not** be charged. Agree to the terms and conditions and click `Sign up`.
 
     ![image](./media/2018-08-16-09-02-00.jpg)
+
+[Back to top](#content)
+
+---
+
+## Exercise 4: Provision a virtual machine for development<a name="ex4"></a>
+To follow the programming examples in the upcoming hands-on labs you will need a machine running Microsoft Visual Studio. In this exercise you will provision a virtual machine in Azure that has Visual Studio 2017 already installed.
+
+1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to [portal.azure.com](https://portal.azure.com) and sign in using the e-mail address used in the previous exercise.
+
+1. Click `Virtual machines` in the menu on the left and 'Add' on the top of the page.
+
+    ![image](./media/2018-07-18-15-24-00.jpg)
+
+1. Enter `Visual Studio 2017` in the search box.
+
+    ![image](./media/2018-07-18-15-39-00.jpg)
+
+1. From the results select `Visual Studio Community 2017 (latest release) on Windows Server 2016 Enterprise N (x64)` and click `Create` on the bottom of the page.
+
+    ![image](./media/2018-08-30-13-18-00.jpg)
+
+1. Assign a name to your virtual machine and to the resource group that will be created along with the virtual machine. Enter your username and choose a password. Use your free trial as the subscription. Click `OK` at the bottom of the page.
+
+    ![image](./media/2018-08-30-16-27-00.jpg)
+
+1. From the list of.machine sizes select `B2s` and click `Select` at the bottom of the page.
+
+    ![image](./media/2018-08-30-16-33-00.jpg)
+
+1. Use the default settings. Click `OK` at the bottom of the page.
+
+    ![image](./media/2018-08-30-16-35-00.jpg)
+
+1. Review the summary. Click `Create` at the bottom of the page.
+
+    ![image](./media/2018-08-30-16-37-00.jpg)
+
+1. While the virtual machine is provisioned you will see a notification in the top menu bar.
+
+    ![image](./media/2018-08-30-16-39-00.jpg)
+
+1. You will also see a notification when the provisioning process has finished.
+
+    ![image](./media/2018-08-30-16-40-00.jpg)
+
+1. Click `Virtual machines` in the menu on the left and click on the newly created virtual machine.
+
+    ![image](./media/2018-08-30-16-42-00.jpg)
+
+1. On the details page of the virtual machine click `Start` if it is not already running, then click `Connect`.
+
+    ![image](./media/2018-08-30-16-43-00.jpg)
+
+1.  Use the `RDP` tab and click `Download RDP File`.
+
+    ![image](./media/2018-08-30-16-45-00.jpg)
+
+1.  A remote desktop session will start. Enter the credentials you provided when setting up the virtual machine. Once you can see the desktop of Windows Server 2016 start Visual Studio 2017. Enter the credentials you used to create the Azure Free Trial to activate Visual Studio.
+
+    ![image](./media/2018-08-30-16-50-00.jpg)
+
+Your virtual machine is now ready to use.
 
 [Back to top](#content)
 
