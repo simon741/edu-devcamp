@@ -108,7 +108,7 @@ You have manually created an assignment for your class. In a later hands-on-lab 
 ---
 
 ## Exercise 3: View demo data as teacher and student<a name="ex3"></a>
-To see the demo data you created in [HOL 0](./../HOL0) you have to use Teams as one of the created users that have classes assigned to them. Please be aware that classes will be added to teams and are visible to students as soon as a teacher for that class logs into teams. To log in as a teacher or student you will reset their passwords.
+To see the demo data you created in [HOL 0](./../HOL0) you have to use Teams as one of the created users that have classes assigned to them. Please be aware that classes will be added to teams and are visible to students as soon as a teacher for that class logs into teams. To log in as a teacher or student you will need to know their login names.
 
 1. Launch a private web browser, navigate to [admin.microsoft.com/AdminPortal](https://admin.microsoft.com/AdminPortal/) and sign in using your O365 Global Admin account credentials. Click `Users`.
 
@@ -122,23 +122,17 @@ To see the demo data you created in [HOL 0](./../HOL0) you have to use Teams as 
 
     ![image](./media/2018-08-29-13-08-00.jpg)
 
-1. Click `Reset password`.
+1. You can see the classes Bill teaches as group memberships. His username is `billsluss@yourdomain.onmicrosoft.com`.
 
     ![image](./media/2018-08-29-13-20-00.jpg)
 
-1. Select `Let me create the password` and remove the tick mark from `Make this user change their password when they first sign in`. Enter a password of your choice and click `Reset`.
-
-    ![image](./media/2018-08-29-13-22-00.jpg)
-
 1. Return to the list of active users and repeat the process for one of Bill's students in the `Technology - Programming 2` class: `Jane Doe`.
-
-    ![image](./media/2018-08-29-13-26-00.jpg)
 
 1. Start the Teams client. Click the initials of the logged in user in the upper right corner and select `Sign out`.
 
     ![image](./media/2018-08-29-13-27-00.jpg)
 
-1. Teams will automatically restart and display the login dialog. Login as `Bill Sluss` (`billsluss@yourdomain.onmicrosoft.com`) using the password you just set for him.
+1. Teams will automatically restart and display the login dialog. Login as `Bill Sluss` (`billsluss@yourdomain.onmicrosoft.com`) using the password `P@ssword`.
 
     ![image](./media/2018-08-29-13-29-00.jpg)
 
@@ -150,7 +144,7 @@ To see the demo data you created in [HOL 0](./../HOL0) you have to use Teams as 
 
     ![image](./media/2018-08-29-13-39-00.jpg)
 
-1. Log out and log in again as `Jane Doe` (`jdoe@yourdomain.onmicrosoft.com`).
+1. Log out and log in again as `Jane Doe` (`jdoe@yourdomain.onmicrosoft.com`), again using the password `P@ssword`.
 
     ![image](./media/2018-08-29-13-46-00.jpg)
 
