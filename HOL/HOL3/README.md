@@ -157,39 +157,96 @@ To see the demo data you created in [HOL 0](./../HOL0) you have to use Teams as 
 ---
 
 ## Exercise 4: Create a Teams app<a name="ex4"></a>
+Now you will add your own tab app to Teams. A tab app is a web application that runs within the teams client. The app will be hosted as an Azure app service. Some preparations are necessary before you can start coding.
 
-### Write your app
-
-1. ...
-
-### Host your app in Azure
+### Create an app service in Azure
 
 You need the Azure trial subscription created in HOL 0.
 
-ARM Script to create app? Besser alles von Hand machen. DEV VM: Visual Studio Community 2017 on Windows 10 Enterprise N (x64)
+1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to [teams.microsoft.com](https://portal.azure.com/). Click `App Services` on the left menu and `Add` at the top of the page.
 
-Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run this sample. You can quickly host your app using the Azure Cloud Shell found on the Microsoft Azure Dashboard.
+    ![image](./media/2018-09-05-10-50-00.jpg)
 
-1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome)
- and browse to [teams.microsoft.com](https://portal.azure.com/). Select the `Cloud Shell` button on the menu in the upper-right corner of the Azure portal. This will open the Cloud Shell at the bottom of the screen.
+1. We will create a simple HTML based app with inline JavaScript code so it will be sufficient to use the `Web App` template. Select it and click `Create`.
 
-    ![image](./media/2018-07-18-12-36-00.jpg)
+    ![image](./media/2018-09-05-10-59-00.jpg)
 
-1. A resource group is a logical container into which Azure resources like web apps, databases, and storage accounts are deployed and managed. In the Cloud Shell, create a resource group with the command below. The command creates a resource group named `eduDevCampResourceGroup` in the West Europe location. To see all supported locations for App Service in `Free` tier, run the `az appservice list-locations --sku FREE` command. You generally create your resource group and the resources in a region near you. 
+1. Enter a name for your new app, select the resource group you used to create the virtual machine in HOL 0 and click `Create`.
 
-    `
-    az group create --name eduDevCampResourceGroup --location "West Europe"
-    `
+    ![image](./media/2018-09-05-11-01-00.jpg)
 
-    When the command finishes, a JSON output shows you the resource group properties.
+1. A notification will tell you when the deployment finished.
 
-1. In the Cloud Shell, create an App Service plan with the command below.
+    ![image](./media/2018-09-05-11-10-00.jpg)
 
-    `
-    az appservice plan create --name eduDevCampAppServicePlan --resource-group eduDevCampResourceGroup --sku FREE
-    `
+1. Navigate to your web app and click `Browse` at the top of the page.
 
-1. In the Cloud Shell, create a web app in the myAppServicePlan App Service plan with the az webapp create command. 
+    ![image](./media/2018-09-05-11-12-00.jpg)
+
+1. A new browser tab will open and tell you that your app service is running. Now you can upload your app to be hosted in Azure. Note the URL of your app service. You will need to add it to your code.
+
+    ![image](./media/2018-09-05-11-14-00.jpg)
+
+### Register a new app
+
+For your app to be able to gain permissions to Microsoft Graph API you will need an app id.
+
+1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to [http://apps.dev.microsoft.com](http://apps.dev.microsoft.com) and sign in.
+
+    ![image](./media/2018-09-06-15-36-00.jpg)
+
+1. Click `Add an app`, enter a name for your app and click `Create`.
+
+    ![image](./media/2018-09-06-15-39-00.jpg)
+
+1. Note the `Application Id` value.
+
+    ![image](./media/2018-09-06-15-41-00.jpg)
+
+1. Scroll down to the `Platforms` section and click `Add Platform`.
+
+    ![image](./media/2018-09-06-15-43-00.jpg)
+
+1. Select `Web`.
+
+    ![image](./media/2018-09-06-15-46-00.jpg)
+
+1. Paste the URL to your web app that you noted when you created the Azure app service and add `/silent-end.html` (a page you will be creating as part of your app). This is the URL that the authentication service will redirect to after the authentication has been completed.
+
+    ![image](./media/2018-09-06-15-48-00.jpg)
+
+1. Scroll down to the `Microsoft Graph Permissions section` and click `Add` next to TODOTODOTODO Permissions.
+
+    ![image](./media/2018-09-06-16-00-00.jpg)
+
+1. Select TODOTODOTODO... and click TODO.
+
+1. To finish the configuration click `Save` at the bottom of the screen.
+
+    ![image](./media/2018-09-06-16-02-00.jpg)
+
+### Write your app
+
+1. Download the HTML files from the [app](./assets/app) folder.
+
+1. Start Visual Studio and click `File` -> `Open` -> `Folder...`.
+
+    ![image](./media/2018-09-06-16-18-00.jpg)
+
+1. The `Solution Explorer` shows the loaded HTML files.
+
+    ![image](./media/2018-09-06-16-25-00.jpg)
+
+1. ...
+
+1. ...
+
+1. ...
+
+1. You need a manifest file that will tell Teams all about your app. Download the 3 files from the [manifest](./assets/manifest) folder and use Visual Studio to open `manifest.json`.
+
+
+TODO add yourself to an existing class
 
 1. Deploy ZIP file
 
@@ -214,7 +271,15 @@ You must configure your Office 365 to allow Teams the use of external apps (that
 
     ![image](./media/2018-06-28-16-17-30.jpg)
 
+### Upload and test your new tab
+
+1. ...
+
+1. ...
+
 ### Install App Studio
+
+Microsoft Teams includes an app that helps you create your own apps. This is App Studio. You can find it in the store.
 
 1. In Microsoft Teams click `Store` which can be found on the bottom left.
 
@@ -230,7 +295,7 @@ You must configure your Office 365 to allow Teams the use of external apps (that
 
 ### Create an app manifest file
 
-App Studio will create the manifest file for your new app. It also provides ready to use controls for your user interface.
+App Studio will create the manifest files for your new apps. It also provides ready to use controls for your user interface. Here is an example:
 
 1. Click `Open` next to `App`.
 
@@ -240,7 +305,7 @@ App Studio will create the manifest file for your new app. It also provides read
 
     ![image](./media/2018-06-29-10-08-00.jpg)
 
-1. Provide details for all fields. Click `Generate` to generate a new App ID. Download the two icon files from the [assets](./assets) folder: [tabapp192.png](./assets/tabapp192.png) and [tabapp32.png](./assets/tabapp32.png). Upload them in the `Branding` section.
+1. Provide details for all fields. Click `Generate` to generate a new App ID. Upload two icon files in the `Branding` section.
 
     ![image](./media/2018-07-18-11-46-00.jpg)
 
@@ -249,10 +314,6 @@ App Studio will create the manifest file for your new app. It also provides read
     ![image](./media/2018-07-18-11-48-00.jpg)
 
 1. ...
-
-1. ...
-
-### Upload and test your new tab
 
 1. ...
 
