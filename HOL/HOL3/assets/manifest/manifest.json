@@ -1,0 +1,40 @@
+﻿{
+  "$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json", 
+  "manifestVersion": "1.2",
+  "version": "1.0.0",
+  "id": "3A311CD8-BBC5-41D4-A23D-04026E2BF989",
+  "packageName": "EDC Teams Tab App",
+  "developer": {
+    "name": "name@yourdomain.onmicrosoft.com",
+    "websiteUrl": "https://YOURDOMAIN.azurewebsites.net/app/todo.html",
+    "privacyUrl": "https://YOURDOMAIN.azurewebsites.net/app/todo.html",
+    "termsOfUseUrl": "https://YOURDOMAIN.azurewebsites.net/app/todo.html"
+  },
+  "name": {
+    "short": "Classmate Tab",
+    "full": "Classmate Tab for Teams"
+  },
+  "description": {
+    "short": "Tab for displaying your classmates",
+    "full": "Tab for displaying your classmates"
+  },
+   "icons": {
+    "outline": "32.png", 
+    "color": "192.png" 
+  },
+  "accentColor": "#333333",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://YOURDOMAIN.azurewebsites.net/app/config.html",
+      "canUpdateConfiguration": true,
+      "scopes": [ "team" ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+     "YOURDOMAIN.azurewebsites.net"   
+  ]
+}
