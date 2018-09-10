@@ -6,9 +6,9 @@
   "packageName": "EDC Teams Tab App",
   "developer": {
     "name": "name@yourdomain.onmicrosoft.com",
-    "websiteUrl": "https://YOURDOMAIN.azurewebsites.net/app/todo.html",
-    "privacyUrl": "https://YOURDOMAIN.azurewebsites.net/app/todo.html",
-    "termsOfUseUrl": "https://YOURDOMAIN.azurewebsites.net/app/todo.html"
+    "websiteUrl": "https://YOURAPPNAME.azurewebsites.net/todo.html",
+    "privacyUrl": "https://YOURAPPNAME.azurewebsites.net/todo.html",
+    "termsOfUseUrl": "https://YOURAPPNAME.azurewebsites.net/todo.html"
   },
   "name": {
     "short": "Classmate Tab",
@@ -25,7 +25,7 @@
   "accentColor": "#333333",
   "configurableTabs": [
     {
-      "configurationUrl": "https://YOURDOMAIN.azurewebsites.net/app/config.html",
+      "configurationUrl": "https://YOURAPPNAME.azurewebsites.net/config.html",
       "canUpdateConfiguration": true,
       "scopes": [ "team" ]
     }
@@ -35,6 +35,6 @@
     "messageTeamMembers"
   ],
   "validDomains": [
-     "YOURDOMAIN.azurewebsites.net"   
+    "YOURAPPNAME.azurewebsites.net"
   ]
 }

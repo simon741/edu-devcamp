@@ -17,7 +17,7 @@
                 endpoints: {
                     "https://graph.microsoft.com": "https://graph.microsoft.com"
                 },
-                navigateToLoginRequestUrl: false,
+                navigateToLoginRequestUrl: false
             };
             let authContext = new AuthenticationContext(config);
             if (authContext.isCallback(window.location.hash)) {

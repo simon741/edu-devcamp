@@ -219,13 +219,15 @@ For your app to be able to gain permissions to Microsoft Graph API you will need
 
     ![image](./media/2018-09-06-16-00-00.jpg)
 
-1. Select TODOTODOTODO... and click TODO.
+1. Select TODO, TODO, TODO... and click TODO.
 
 1. To finish the configuration click `Save` at the bottom of the screen.
 
     ![image](./media/2018-09-06-16-02-00.jpg)
 
 ### Write your app
+
+This simple sample app will demonstrate the abilities of tabs and demonstrate how to access the Graph API from within the context of an integrated app. It is based on [this](https://gsexdev.blogspot.com/2018/06/building-microsoft-teams-tab.html) by Glen Scales.
 
 1. Download the HTML files from the [app](./assets/app) folder.
 
@@ -237,20 +239,27 @@ For your app to be able to gain permissions to Microsoft Graph API you will need
 
     ![image](./media/2018-09-06-16-25-00.jpg)
 
-1. ...
+1. Open `auth.html`. Look for the line `clientId: "YOURAPPID",` and replace `YOURAPPID` with the `Application Id` you noted earlier when registering the app. The `auth.html` will handle the authentication of the app using ADAL (`Azure ActiveDirectory Library for JS`)
 
-1. ...
+1. Open `silent-end.html` and repeat the process. The `silent-end.html` is the redirect target for the authentication.
 
-1. ...
+1. Open `config.html` and replace the three occurrences of `YOURAPPNAME` for the values of `contentUrl`, `websiteUrl` and `removeUrl` with the name you choose for your Azure app. The `config.html` is called when your app is installed and sets the URLs to the content pages of the app.
+
+1. Open `tab.html` and again replace `YOURAPPID` with the `Application Id`. `tab.html` contains the actual content of your app. It connects to the Graph API and using the context of the current class/group gets all the team members which are then displayed on the tab. A second call to the Graph API gets information about the class and displays its time frame. A third call gets the profile pictures of the users. To see these start the Teams client and login as the teachers and students and choose a profile picture.
+
+1. Save all changes. Take the six HTML files in the folder and turn them into a zip compressed folder. Name it `app.zip`.
 
 1. You need a manifest file that will tell Teams all about your app. Download the 3 files from the [manifest](./assets/manifest) folder and use Visual Studio to open `manifest.json`.
 
+1. Go to `Tools` -> `Create GUID` to create a new unique guid for your app. Copy it and replace the guid next to `"id":`.
 
-TODO add yourself to an existing class
+    ![image](./media/2018-09-06-16-51-00.jpg)
 
-1. Deploy ZIP file
+1. Set you e-mail address next to `"name":` and replace the five occurrences of `YOURAPPNAME` for the values of `websiteUrl`, `privacyUrl`, `termsOfUseUrl`, `configurationUrl` and `validDomains`.
 
-1. Browse to the app
+1. Save all changes.
+
+1. Take the three files in the folder (`manifest.json`, `32.png`, `192.png`) and turn them into a zip compressed folder. Name it `manifest.zip`.
 
 ### Allow external apps in Teams
 
@@ -273,8 +282,30 @@ You must configure your Office 365 to allow Teams the use of external apps (that
 
 ### Upload and test your new tab
 
-1. ...
+There are many ways to deploy an Azure web app. If you develop in Visual Studio you can use the publish feature to upload your apps. Azure also features support for VSTS integration, Github, OneDrive, FTP and some other services. The most hassle-free way to deploy this simple web app is to use the Zip Deploy feature of Azure's Kudu UI.
 
+1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to `https://YOURAPPNAME.scm.azurewebsites.net/ZipDeploy` ( again replace `YOURAPPNAME` with the name you choose for your Azure app) and sign in. You are now seeing the Advanced Tools for development. You can also reach this page via the Azure portal UI by navigating to your App Service and selecting `Advanced Tools`.
+
+    ![image](./media/2018-09-10-09-39-00.jpg)
+
+1. From the menu select `Tools` -> `Zip Push Deploy`.
+
+    ![image](./media/2018-09-10-09-37-00.jpg)
+
+1. Drag and drop the `app.zip` you created earlier in the explorer part of the page. The content of the zip file will replace all of the existing content.
+
+    ![image](./media/2018-09-10-09-16-00.jpg)
+
+1. Your app has been deployed. To deploy updates simply drag and drop a new zip file here. Browse to the app by opening `https://YOURAPPNAME.azurewebsites.net/tab.html`.
+
+    ![image](./media/2018-09-10-09-44-00.jpg)
+
+1. If your deployment succeeded you will see the `Show classmates` button.
+
+### Install your app in teams
+
+
+TODO add yourself to an existing class
 1. ...
 
 ### Install App Studio

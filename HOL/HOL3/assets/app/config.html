@@ -15,10 +15,10 @@
         microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
             // Save the settings for the tab and notify of success
             microsoftTeams.settings.setSettings({
-                contentUrl: "https://YOURDOMAIN.azurewebsites.net/tab.html",
+                contentUrl: "https://YOURAPPNAME.azurewebsites.net/tab.html",
                 suggestedDisplayName: "My classmates",
-                websiteUrl: "https://YOURDOMAIN.azurewebsites.net/tab.html",
-                removeUrl: "https://YOURDOMAIN.azurewebsites.net/remove.html"
+                websiteUrl: "https://YOURAPPNAME.azurewebsites.net/tab.html",
+                removeUrl: "https://YOURAPPNAME.azurewebsites.net/remove.html"
             });
             saveEvent.notifySuccess();
         });
