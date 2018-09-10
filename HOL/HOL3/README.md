@@ -215,11 +215,11 @@ For your app to be able to gain permissions to Microsoft Graph API you will need
 
     ![image](./media/2018-09-06-15-48-00.jpg)
 
-1. Scroll down to the `Microsoft Graph Permissions section` and click `Add` next to TODOTODOTODO Permissions.
+1. Scroll down to the `Microsoft Graph Permissions section` and click `Add` next to `Delegated Permissions`.
 
     ![image](./media/2018-09-06-16-00-00.jpg)
 
-1. Select TODO, TODO, TODO... and click TODO.
+1. Select `EduRoster.Read`, `Group.Read.All`, `User.Read.All` and click `OK`.
 
 1. To finish the configuration click `Save` at the bottom of the screen.
 
@@ -324,19 +324,23 @@ TODO add yourself to an existing class
 
     ![image](./media/2018-09-10-11-39-00.jpg)
 
-1. Select the `manifest.zip` file you created earlier.
+1. Select one of the teams and click `Install`.
 
     ![image](./media/2018-09-10-11-39-00.jpg)
 
+1. The (nearly empty) configuration page will be displayed. Click `Save`.
+
     ![image](./media/2018-09-10-11-55-00.jpg)
+
+1. Click `Set up`. Your app has now been added to the `General` section of the selected class.
 
     ![image](./media/2018-09-10-12-26-00.jpg)
 
-1. ...
+1. Go to `General` and click `My classmates`. You will see the `Show classmates` button. Once you press it you will be first prompted to enter your credentials and then prompted to grant permissions to the app. Once you click `Accept` the team member data will be loaded via the Graph API.
 
-1. ...
+    ![image](./media/2018-09-10-16-34-00.jpg)
 
-1. ...
+Your app is now running as a tab in Microsoft teams. Whenever you update the files in the Azure App Service the tab will change accordingly.
 
 ### Install App Studio
 

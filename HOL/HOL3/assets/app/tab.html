@@ -1,73 +1,73 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>My classmates</title>
-	<style>
-		img {
-			border-radius: 50%;
-		}
+    <meta charset="UTF-8">
+    <title>My classmates</title>
+    <style>
+        img {
+            border-radius: 50%;
+        }
 
-		.button {
-			background-color: #008CBA;
-			border: none;
-			color: white;
-			padding: 15px 32px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 12px;
-		}
+        .button {
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+        }
 
-		.loader {
-			border: 16px solid #f3f3f3;
-			border-radius: 50%;
-			border-top: 16px solid #5558AF;
-			border-bottom: 16px solid #5558AF;
-			width: 80px;
-			height: 80px;
-			-webkit-animation: spin 2s linear infinite;
-			animation: spin 2s linear infinite;
-		}
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #5558AF;
+            border-bottom: 16px solid #5558AF;
+            width: 80px;
+            height: 80px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
 
-		@-webkit-keyframes spin {
-			0% {
-				-webkit-transform: rotate(0deg);
-			}
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
 
-			100% {
-				-webkit-transform: rotate(360deg);
-			}
-		}
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
 
-		@keyframes spin {
-			0% {
-				transform: rotate(0deg);
-			}
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
 
-			100% {
-				transform: rotate(360deg);
-			}
-		}
-	</style>
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-	<div id="data"></div>
-	<div id="ProgresLoader" class="loader" hidden></div>
-	<link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css" />
-	<link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css" />
-	<script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.17/js/adal.min.js"></script>
-	<script src="https://code.jquery.com/jquery-1.12.4.js"
-			integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
-			crossorigin="anonymous"></script>
-	<script src="https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js"></script>
-	<script type="text/javascript">
-		// Initialize microsoft teams tab library
-		microsoftTeams.initialize();
-		$('#ProgresLoader').hide();
-		var token = null;
-		
-		// getData function to perform auth flow and get user's Data
+    <div id="data"></div>
+    <div id="ProgresLoader" class="loader" hidden></div>
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css" />
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css" />
+    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.17/js/adal.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    <script src="https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js"></script>
+    <script type="text/javascript">
+        // Initialize microsoft teams tab library
+        microsoftTeams.initialize();
+        $('#ProgresLoader').hide();
+        var token = null;
+
+        // getData function to perform auth flow and get user's Data
         var ShowClassmates = function () {
             $('#ProgresLoader').show();
             let upn = undefined;
@@ -77,82 +77,84 @@
             });
         };
 
-		var Authuser = function (upn) {
-			let config = {
-				clientId: "YOURAPPID",
-				redirectUri: window.location.origin + "/silent-end.html",       // This should be in the list of redirect uris for the AAD app
-				cacheLocation: "localStorage",
-				navigateToLoginRequestUrl: false,
-				endpoints: {
-					"https://graph.microsoft.com": "https://graph.microsoft.com"
-				}
-			};
-			if (upn) {
-				config.extraQueryParameters = "scope=openid+profile&login_hint=" + encodeURIComponent(upn);
-			} else {
-				config.extraQueryParameters = "scope=openid+profile";
-			}
+        var Authuser = function (upn) {
+            let config = {
+                clientId: "YOURAPPID", redirectUri: window.location.origin + "/silent-end.html",	   // This should be in the list of redirect uris for the AAD app
+                cacheLocation: "localStorage",
+                navigateToLoginRequestUrl: false,
+                endpoints: {
+                    "https://graph.microsoft.com": "https://graph.microsoft.com"
+                }
+            };
+            if (upn) {
+                config.extraQueryParameters = "scope=openid+profile&login_hint=" + encodeURIComponent(upn);
+            } else {
+                config.extraQueryParameters = "scope=openid+profile";
+            }
 
-			let authContext = new AuthenticationContext(config);
+            let authContext = new AuthenticationContext(config);
 
-			// See if there's a cached user and it matches the expected user
-			let user = authContext.getCachedUser();
-			if (user) {
-				if (user.userName !== upn) {
-					// User doesn't match, clear the cache
-					authContext.clearCache();
-				}
-			}
+            // See if there's a cached user and it matches the expected user
+            let user = authContext.getCachedUser();
+            if (user) {
+                if (user.userName !== upn) {
+                    // User doesn't match, clear the cache
+                    authContext.clearCache();
+                }
+            }
 
-			// Get the id token (which is the access token for resource = clientId)
-			let token = authContext.getCachedToken(config.clientId);
-			if (token) {
-				authContext.acquireToken("https://graph.microsoft.com", function (error, idtoken) {
-					if (error || !idtoken) {
-						html = html + "<div>Failed to use cached token</div>";
-						$('#data').empty()
-						$('#data').append(html);
-					}
-					else
-						GetGroupMembers(idtoken);
-				});
-			} else {
-				microsoftTeams.authentication.authenticate({
-					url: window.location.origin + "/auth.html",
-					width: 400,
-					height: 400,
-					successCallback: function (t) {
-						// Note: token is only good for one hour
-						token = t;
-						GetGroupMembers(token);
-					},
-					failureCallback: function (err) {
-						html = html + "<div>Failed to get authenticate and get token.</div>";
-						$('#data').empty()
-						$('#data').append(html);
-					}
-				});
-			}
-		};
+            // Get the id token (which is the access token for resource = clientId)
+            let token = authContext.getCachedToken(config.clientId);
+            if (token) {
+                authContext.acquireToken("https://graph.microsoft.com", function (error, idtoken) {
+                    if (error || !idtoken) {
+                        var html = "<div>Failed to use cached token</div>";
+                        $('#data').empty()
+                        $('#data').append(html);
+                    }
+                    else
+                        GetGroupMembers(idtoken);
+                });
+            } else {
+                microsoftTeams.authentication.authenticate({
+                    url: window.location.origin + "/auth.html",
+                    width: 400,
+                    height: 400,
+                    successCallback: function (t) {
+                        // Note: token is only good for one hour
+                        token = t;
+                        GetGroupMembers(token);
+                    },
+                    failureCallback: function (err) {
+                        var html = "<div>Failed to get authenticate and get token: " + JSON.stringify(err) + "</div>";
+                        $('#data').empty()
+                        $('#data').append(html);
+                    }
+                });
+            }
+        };
 
-		var GetGroupMembers = function (idToken) {
-			microsoftTeams.getContext(function (context) {
-				GroupId = context.groupId;
-				$.ajax({
-					type: "GET",
-					contentType: "application/json; charset=utf-8",
-					url: ("https://graph.microsoft.com/v1.0/groups/" + GroupId + "/members"),
-					dataType: 'json',
-					headers: { 'Authorization': 'Bearer ' + idToken }
-				}).done(function (item) {
-					GetClassInfo(item, GroupId, idToken);
-				}).fail(function (error) {
-					// Handle error
-				});
-			});
+        var GetGroupMembers = function (idToken) {
+            microsoftTeams.getContext(function (context) {
+                GroupId = context.groupId;
+                $.ajax({
+                    type: "GET",
+                    contentType: "application/json; charset=utf-8",
+                    url: ("https://graph.microsoft.com/v1.0/groups/" + GroupId + "/members"),
+                    dataType: 'json',
+                    headers: { 'Authorization': 'Bearer ' + idToken }
+                }).done(function (item) {
+                    GetClassInfo(item, GroupId, idToken);
+                }).fail(function (error) {
+                    // Handle error
+                    var html = "<div>Failed to get group members: " + JSON.stringify(error) + "</div>";
+                    $('#data').empty()
+                    $('#data').append(html);
+                });
+            });
 
-		};
-		
+        };
+
         var GetClassInfo = function (mailTipsRequestResults, GroupId, idToken) {
             var MailTipsRquest = {};
             var EmailAddresses = [];
@@ -175,9 +177,12 @@
                 BuildClassMateList(classInfo, displayNameMap, mailTipsRequestResults, idToken);
             }).fail(function (error) {
                 // Handle error
+                var html = "<div>Failed to get class: " + JSON.stringify(error) + "</div>";
+                $('#data').empty()
+                $('#data').append(html);
             });
         };
-		
+
         var BuildClassMateList = function (item, displayNameMap, mailTipsRequestResults, idToken) {
             var html = "<div>Classes in " + item.displayName + " take place from " + item.term.startDate + " to " + item.term.endDate + "</div>";
             html = html + "<div class=\"ms-Table\" style=\"border-collapse:collapse;border: 1px solid black;table-layout: auto;width:75%;\;background-color:white;\">";
@@ -230,27 +235,27 @@
             }
         };
 
-		function uuidv4() {
-			function hex(s, b) {
-				return s +
-					(b >>> 4).toString(16) +  // high nibble
-					(b & 0b1111).toString(16);   // low nibble
-			}
+        function uuidv4() {
+            function hex(s, b) {
+                return s +
+                    (b >>> 4).toString(16) +  // high nibble
+                    (b & 0b1111).toString(16);   // low nibble
+            }
 
-			let r = crypto.getRandomValues(new Uint8Array(16));
+            let r = crypto.getRandomValues(new Uint8Array(16));
 
-			r[6] = r[6] >>> 4 | 0b01000000; // Set type 4: 0100
-			r[8] = r[8] >>> 3 | 0b10000000; // Set variant: 100
+            r[6] = r[6] >>> 4 | 0b01000000; // Set type 4: 0100
+            r[8] = r[8] >>> 3 | 0b10000000; // Set variant: 100
 
-			return r.slice(0, 4).reduce(hex, '') +
-				r.slice(4, 6).reduce(hex, '-') +
-				r.slice(6, 8).reduce(hex, '-') +
-				r.slice(8, 10).reduce(hex, '-') +
-				r.slice(10, 16).reduce(hex, '-');
+            return r.slice(0, 4).reduce(hex, '') +
+                r.slice(4, 6).reduce(hex, '-') +
+                r.slice(6, 8).reduce(hex, '-') +
+                r.slice(8, 10).reduce(hex, '-') +
+                r.slice(10, 16).reduce(hex, '-');
         }
 
-	</script>
-	<br />
-	<input id="ShowClassmates" type="button" class="button" value="Show classmates" onclick="ShowClassmates();" />
+    </script>
+    <br />
+    <input id="ShowClassmates" type="button" class="button" value="Show classmates" onclick="ShowClassmates();" />
 </body>
 </html>
