@@ -308,6 +308,36 @@ There are many ways to deploy an Azure web app. If you develop in Visual Studio 
 TODO add yourself to an existing class
 1. ...
 
+1. ...
+
+1. ...
+
+1. ...
+
+1. ...
+
+1. Click `Store` on the bottom of the left menu and then `Upload a custom app` at the end of the list.
+
+    ![image](./media/2018-09-10-11-31-00.jpg)
+
+1. Select the `manifest.zip` file you created earlier.
+
+    ![image](./media/2018-09-10-11-39-00.jpg)
+
+1. Select the `manifest.zip` file you created earlier.
+
+    ![image](./media/2018-09-10-11-39-00.jpg)
+
+    ![image](./media/2018-09-10-11-55-00.jpg)
+
+    ![image](./media/2018-09-10-12-26-00.jpg)
+
+1. ...
+
+1. ...
+
+1. ...
+
 ### Install App Studio
 
 Microsoft Teams includes an app that helps you create your own apps. This is App Studio. You can find it in the store.
