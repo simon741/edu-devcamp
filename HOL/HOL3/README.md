@@ -304,19 +304,31 @@ There are many ways to deploy an Azure web app. If you develop in Visual Studio 
 
 ### Install your app in teams
 
+Now it is time to add your app as a tab in Microsoft Teams. Since some of the Graph API calls (currently) require admin rights you will first elevate a teacher to admin level to test your app.
 
-TODO add yourself to an existing class
-1. ...
+1. Launch a private web browser, navigate to [admin.microsoft.com/AdminPortal](https://admin.microsoft.com/AdminPortal/) and sign in using your O365 Global Admin account credentials. Click `Users`.
 
-1. ...
+    ![image](./media/2018-08-29-13-01-00.jpg)
 
-1. ...
+1. Click `Active users`.
 
-1. ...
+    ![image](./media/2018-08-29-13-04-00.jpg)
 
-1. ...
+1. Click the name `Bill Sluss`.
 
-1. Click `Store` on the bottom of the left menu and then `Upload a custom app` at the end of the list.
+    ![image](./media/2018-08-29-13-08-00.jpg)
+
+1. In the `Roles` section click `Edit`.
+
+    ![image](./media/2018-09-11-08-29-00.jpg)
+
+1. Select `Global administrator` and click `Save`.
+
+    ![image](./media/2018-09-11-09-00-00.jpg)
+
+1. Start the teams client and login as `Bill Sluss`.
+
+1. Click `Store` on the bottom of the left menu and then `Upload a custom app` at the end of the list (if another pop-up appears select `Upload for me or my team`).
 
     ![image](./media/2018-09-10-11-31-00.jpg)
 
@@ -324,7 +336,7 @@ TODO add yourself to an existing class
 
     ![image](./media/2018-09-10-11-39-00.jpg)
 
-1. Select one of the teams and click `Install`.
+1. Select the team `Technology - Programming 2` (note that Bill Sluss does not have permissions to add apps to teams where he is not the teacher) and click `Install`.
 
     ![image](./media/2018-09-10-11-39-00.jpg)
 
@@ -360,7 +372,7 @@ Microsoft Teams includes an app that helps you create your own apps. This is App
 
 ### Create an app manifest file
 
-App Studio will create the manifest files for your new apps. It also provides ready to use controls for your user interface. Here is an example:
+App Studio will create the manifest files for your new apps including creating an app id, two steps you did manually in the previous exercise. It also provides ready to use controls for your user interface. To create a manifest file:
 
 1. Click `Open` next to `App`.
 
@@ -378,9 +390,7 @@ App Studio will create the manifest files for your new apps. It also provides re
 
     ![image](./media/2018-07-18-11-48-00.jpg)
 
-1. ...
-
-1. ...
+1. Continue through the wizard. Once you reach the end you will be able to download the manifest file.
 
 [Back to top](#content)
 
