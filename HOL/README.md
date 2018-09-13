@@ -56,6 +56,17 @@
 * [Download the finished PWA solution](HOL4/#download)
 
 ---
+## HOL 7 - Microsoft Azure Machine Learning
+
+* [Overview](HOL7/#overview)
+* [Prerequisites](HOL7/#prerequisites)
+* [Exercise 1: Upload the dataset](HOL7/#ex1)
+* [Exercise 2: Create a new experiment](HOL7/#ex2)
+    * [Create the predictive model](HOL7/#ex2a)
+    * [Improve the model](HOL7/#ex2b)
+* [Exercise 3: Set up a web service](HOL7/#ex3)
+
+---
 
 [Back to top](#content)
 
