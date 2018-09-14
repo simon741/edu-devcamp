@@ -16,9 +16,9 @@
 
 ## Overview<a name="overview"></a>
 
-Intro...
+In this hands-on lab you will create a basic progressive web app using Visual Studio.
 
-**This lab is a requirement for the other hands-on labs!**
+**This lab is a requirement for hands-on lab 4!**
 
 [Back to top](#content)
 
