@@ -45,14 +45,6 @@ In this lab, you will set up an Office 365 Educational trial subscription, popul
 
 ---
 
-## Exercise 0: Download GIT repository
-
-1. optional?
-
-[Back to top](#content)
-
----
-
 ## Exercise 1: Set up Office 365 Educational trial subscription<a name="ex1"></a>
 
 1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome)
