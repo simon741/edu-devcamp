@@ -133,7 +133,7 @@ To improve your predictive model you will now try a different training algorithm
 
 1. Select the `Attended` column and select `compare to` `Scored Labels`. The new `ScatterPlot` looks better than the previous one. Training the model using `Neural Network Regression` algorithm seems to have improved the result.
 
-    ![image](./media/2018-09-13-16-00-00.jpg)
+    ![image](./media/2018-09-13-16-04-00.jpg)
 
 1. Close the visualization and right-click on the `Evaluate Model` -> `Evaluation results` node and select `Visualize`. The statistical data confirms that the predictive model performs better.
 
