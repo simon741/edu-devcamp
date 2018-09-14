@@ -29,7 +29,6 @@
     * [HTTPS](HOL2/#ex1c)
     * [Service Workers](HOL2/#ex1d)
 * [Exercise 2: Customize the PWA](HOL2/#ex2)
-* [Exercise 3: ...](HOL2/#ex3)
 * [Download the finished PWA solution](HOL2/#download)
 
 ---

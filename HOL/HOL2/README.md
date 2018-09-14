@@ -9,7 +9,6 @@
     * [HTTPS](#ex1c)
     * [Service Workers](#ex1d)
 * [Exercise 2: Customize the PWA](#ex2)
-* [Exercise 3: ...](#ex3)
 * [Download the finished PWA solution](#download)
 * [Continue with lab 3](#continue)
 
@@ -339,20 +338,6 @@ You will add some additional placeholder pages and a simple nav bar to the PWA t
 1. Build (press `Ctrl + Shift + B`) and Start Debugging (`F5`). When you open [http://localhost:1337](http://localhost:1337) you should see your new nav bar in your re-branded PWA and should be able to navigate to the two new pages you have created.
 
     ![image](./media/2018-07-23-12-40-00.jpg)
-
-[Back to top](#content)
-
----
-
-## Exercise 3: ...<a name="ex3"></a>
-
-Intro...
-
-1. ...
-
-1. ...
-
-1. ...
 
 [Back to top](#content)
 
