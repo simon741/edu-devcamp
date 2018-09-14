@@ -12,7 +12,7 @@
 ---
 
 ## Overview<a name="overview"></a>
-In this lab, you will set up Microsoft Teams on your system, create your first team and create a custom Teams app hosted in Microsoft Azure.
+In this lab, you will learn how to integrate Application Insights in your applications to monitor them.
 
 [Back to top](#content)
 
