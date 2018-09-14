@@ -121,7 +121,7 @@ To predict future class attendance you need to create a model which has been tra
 
 ### Improve the model<a name="ex2b"></a>
 
-To improve your predictive model you will now try a different training algorithm an then add additional knowledge to the experiment.
+To improve your predictive model you will now try a different training algorithm.
 
 1. Open `Machine Learning` -> `Initialize Model` -> `Regression`. Select `Neural Network Regression` and drag it to the center of the screen. Remove the line between `Linear Regression` to `Train Model` by selecting it an clicking `DEL` on your keyboard. Replace it with a line from `Neural Network Regression` to `Train Model`.
 
@@ -139,22 +139,7 @@ To improve your predictive model you will now try a different training algorithm
 
     ![image](./media/2018-09-13-16-07-00.jpg)
 
-1. You will now use custom code and some human speculation about the data to create additional columns that might help the predictive model to perform even better. Close the visualization and open `Python Language Modules`. Select `Execute Python Script` and drag it between your sample data and the `Split Data` operation.
-
-    ![image](./media/2018-09-13-16-07-00.jpg)
-
-1. TODO: Hat nichts gebracht. Model hat Zusammenhänge schon erkannt.
-
-    ![image](./media/2018-09-13-16-07-00.jpg)
-
-1. ...
-
-    ![image](./media/2018-09-13-16-07-00.jpg)
-
-1. ...
-
-    ![image](./media/2018-09-13-16-07-00.jpg)
-
+You now have an improved predictive model.
 
 [Back to top](#content)
 
@@ -162,30 +147,47 @@ To improve your predictive model you will now try a different training algorithm
 
 ## Exercise 3:Set up a web service<a name="ex3"></a>
 
-1. Clean up... 
+Microsoft Azure Machine Learning Studio let's you set up a web service based on a trained model with just a few clicks.
+
+1. Clean up your experiment by removing the `Linear Regression` operation.
 
     ![image](./media/2018-09-13-16-52-00.jpg)
 
-1. On the bottom menu bar press `SET UP WEB SERVICE` and select `Predictive Web Service [Recommended]`. This will create tabs in your workspace. The first tab `Training experiment` contains the experiment you created previously and the second tab `Predictive experiment` contains the web service that has been created.
+1. On the bottom menu bar press `SET UP WEB SERVICE` and select `Predictive Web Service [Recommended]`.
 
     ![image](./media/2018-09-13-16-41-00.jpg)
 
+1. This will create tabs in your workspace. The first tab `Training experiment` contains the experiment you created previously and the second tab `Predictive experiment` contains the web service that has been created.
+
     ![image](./media/2018-09-13-16-51-00.jpg)
 
-1. ....
+1. On the bottom menu bar press `RUN` and then `DEPLOY WEB SERVICE`.
 
-    ![image](./media/2018-06-28-16-03-00.jpg)
+    ![image](./media/2018-09-14-08-23-00.jpg)
 
-1. ....
+1. Once the creation of the web service has been created click the `Test` button.
 
-    ![image](./media/2018-06-28-16-05-00.jpg)
+    ![image](./media/2018-09-14-08-27-00.jpg)
 
+1. Enter some course data, ignore the `ATTENDED` field and click the check mark button.
 
+    ![image](./media/2018-09-14-08-30-00.jpg)
 
-[Back to top](#content)
+1. The result of the test will be displayed at the bottom of the screen. Click `DETAILS`.
 
----
+    ![image](./media/2018-09-14-08-31-00.jpg)
 
+1. The last value in the displayed data is the predicted attendance.
+
+    ![image](./media/2018-09-14-08-32-00.jpg)
+
+1. To deploy the web service within an application click the `REQUEST/RESPONSE` link.
+
+    ![image](./media/2018-09-14-08-47-00.jpg)
+
+1. This will take you to a landing page specific to your web service containing an API reference and sample code on how to integrate the web service.
+
+    ![image](./media/2018-09-14-08-49-00.jpg)
 
 [Back to top](#content)
 
