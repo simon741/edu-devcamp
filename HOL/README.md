@@ -59,14 +59,14 @@
 
 * [Overview](HOL5/#overview)
 * [Prerequisites](HOL5/#prerequisites)
-* [Exercise 1: Coming soon](HOL5/#ex1)* 
+* [Exercise 1: Coming soon](HOL5/#ex1)
 
 ---
 ## HOL 6 - Bot Framework
 
 * [Overview](HOL6/#overview)
 * [Prerequisites](HOL6/#prerequisites)
-* [Exercise 1: Coming soon](HOL6/#ex1)* 
+* [Exercise 1: Coming soon](HOL6/#ex1)
 
 ---
 ## HOL 7 - Microsoft Azure Machine Learning
