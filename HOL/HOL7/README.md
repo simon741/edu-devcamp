@@ -105,11 +105,11 @@ To predict future class attendance you need to create a model which has been tra
 
 1. Right-click on the `Score Model` -> `Scored dataset` node and select `Visualize`. A new column has been added to your data of which you are now seeing the 20% that have been tested against your trained model. `Scored Labels` contains the model's prediction for the `Attended` value.
 
-    ![image](./media/2018-06-13-15-39-00.jpg)
+    ![image](./media/2018-09-13-15-39-00.jpg)
 
 1. Select the `Attended` column and select `compare to` `Scored Labels`. This will generate a `ScatterPlot` of the real values versus the predicted values. An ideal result would be a straight line from bottom left to top right. As you can see the result is not yet perfect with some predictions even having negative values.
 
-    ![image](./media/2018-06-13-15-44-00.jpg)
+    ![image](./media/2018-09-13-15-44-00.jpg)
 
 1. Close the visualization and right-click on the `Evaluate Model` -> `Evaluation results` node and select `Visualize`.
 
