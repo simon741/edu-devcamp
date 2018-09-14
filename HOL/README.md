@@ -67,6 +67,13 @@
 * [Exercise 3: Set up a web service](HOL7/#ex3)
 
 ---
+## HOL 8 - Microsoft PowerApps
+
+* [Overview](HOL8/#overview)
+* [Prerequisites](HOL8/#prerequisites)
+* [Exercise 1: Create a class schedule app](HOL8/#ex1)
+
+---
 
 [Back to top](#content)
 

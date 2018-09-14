@@ -193,5 +193,12 @@ Microsoft Azure Machine Learning Studio let's you set up a web service based on 
 
 ---
 
+## Continue with lab 8
+
+You are now ready to start hands-on lab 8. [View HOL 8 instructions](../HOL8).
+
+[Back to top](#content)
+
+---
 
 Copyright 2018 Microsoft Corporation. All rights reserved. Except where otherwise noted, these materials are licensed under the terms of the MIT License. You may use them according to the license as is most appropriate for your project. The terms of this license can be found at https://opensource.org/licenses/MIT.
