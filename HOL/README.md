@@ -55,18 +55,22 @@
 * [Download the finished PWA solution](HOL4/#download)
 
 ---
-## HOL 5 - Coming soon
+## HOL 5 - PowerBI
 
 * [Overview](HOL5/#overview)
 * [Prerequisites](HOL5/#prerequisites)
 * [Exercise 1: Coming soon](HOL5/#ex1)
 
 ---
-## HOL 6 - Bot Framework
+## HOL 6 - Bot Framework and Cognitive Services
 
 * [Overview](HOL6/#overview)
 * [Prerequisites](HOL6/#prerequisites)
-* [Exercise 1: Coming soon](HOL6/#ex1)
+* [Exercise 1: Create a Language Understanding bot with Bot Service](HOL6/#ex1)
+* [Exercise 2: Try the bot](HOL6/#ex2)
+* [Exercise 3: Modify the LUIS app](HOL6/#ex3)
+* [Exercise 4: Modify the bot code](HOL6/#ex4)
+* [Exercise 5: Test the bot](HOL6/#ex5)
 
 ---
 ## HOL 7 - Microsoft Azure Machine Learning

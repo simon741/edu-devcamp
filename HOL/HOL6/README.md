@@ -1,9 +1,13 @@
-# Bot Framework
+# Bot Framework and Cognitive Services
 
 ## Content<a name="content"></a>
 * [Overview](#overview)
 * [Prerequisites](#prerequisites)
-* [Exercise 1: Coming soon](#ex1)
+* [Exercise 1: Create a Language Understanding bot with Bot Service](#ex1)
+* [Exercise 2: Try the bot](#ex2)
+* [Exercise 3: Modify the LUIS app](#ex3)
+* [Exercise 4: Modify the bot code](#ex4)
+* [Exercise 5: Test the bot](#ex5)
 * [Continue with lab 7](#continue)
 
 ---
@@ -17,7 +21,8 @@ In this lab, you will learn how to create an Azure bot, make it available in Tea
 
 ## Prerequisites<a name="prerequisites"></a>
 
-* ...
+* Complete [HOL 0](./../HOL0) to set up an Azure account.
+* Complete [HOL 3](./../HOL3) to install Microsoft Teams.
 
 [Back to top](#content)
 
