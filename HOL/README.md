@@ -40,15 +40,15 @@
 ---
 ## HOL 3 - Progressive Web Apps
 
-* [Overview](HOL2/#overview)
-* [Prerequisites](HOL2/#prerequisites)
-* [Exercise 1: Create a Progressive Web App](HOL2/#ex1)
-    * [Set up a basic web app](HOL2/#ex1a)
-    * [Web App Manifest](HOL2/#ex1b)
-    * [HTTPS](HOL2/#ex1c)
-    * [Service Workers](HOL2/#ex1d)
-* [Exercise 2: Customize the PWA](HOL2/#ex2)
-* [Download the finished PWA solution](HOL2/#download)
+* [Overview](HOL3/#overview)
+* [Prerequisites](HOL3/#prerequisites)
+* [Exercise 1: Create a Progressive Web App](HOL3/#ex1)
+    * [Set up a basic web app](HOL3/#ex1a)
+    * [Web App Manifest](HOL3/#ex1b)
+    * [HTTPS](HOL3/#ex1c)
+    * [Service Workers](HOL3/#ex1d)
+* [Exercise 2: Customize the PWA](HOL3/#ex2)
+* [Download the finished PWA solution](HOL3/#download)
 
 ---
 ## HOL 4 - Monitoring with Application Insights
