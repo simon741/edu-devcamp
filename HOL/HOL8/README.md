@@ -574,9 +574,13 @@ To create a manifest file that can be uploaded by the users:
 
     ![image](./media/2018-06-29-10-08-00.jpg)
 
-1. Provide details for all fields. The only important value is the `App ID`. TODO
+1. Provide details for all fields. The only important value is the `App ID`.
 
     ![image](./media/2018-09-20-11-54-00.jpg)
+
+1. The `App ID` needs to match the id that has been created during exercise 1. You can look it up in the Azure Portal on the `Settings` blade of your `Web App Bot` resource. Note the `Bot handle` too since you will need it in one of the next steps.
+
+    ![image](./media/2018-09-20-15-40-00.jpg)
 
 1. Download the two icon files [32.png](./assets/32.png) and [192.png](./assets/192.png) and upload them in the `Branding` section.
 
@@ -586,33 +590,40 @@ To create a manifest file that can be uploaded by the users:
 
     ![image](./media/2018-09-20-11-57-00.jpg)
 
-1. Choose the `Existing bot` tab and 
+1. Choose the `Existing bot` tab and enter the `Name` and `Microsoft App ID` of your bot. These have to match the values you looked up previously. Choose `Personal` as the `Scope` of the bot since it is targeted at individual students and not a certain team.
 
     ![image](./media/2018-09-20-12-05-00.jpg)
 
+1. Go to `Valid domains` next end enter the URL and click `Add`.
+
     ![image](./media/2018-09-20-12-08-00.jpg)
+
+1. You can lookup the URL in the Azure Portal on your `App Service` resource.
+
+    ![image](./media/2018-09-20-15-56-00.jpg)
+
+1. Move on to `Test and distribute` and click `Download` to download the finished manifest file. This file can now be used to install the bot.
 
     ![image](./media/2018-09-20-12-14-00.jpg)
 
 ### Install the bot<a name="ex6d"></a>
 
-1. Switch user accounts.
+1. Log out of the Teams client and switch to a different user accounts. Choose one of the students. Go to the `Store` (bottom left) and click `Upload a custom app`. Select the downloaded manifest file.
 
     ![image](./media/2018-09-20-12-19-00.jpg)
 
+1. Confirm the installation by clicking `Install`.
+
     ![image](./media/2018-09-20-12-20-00.jpg)
+
+1. After the installation has finished click `Open`.
 
     ![image](./media/2018-09-20-12-21-00.jpg)
 
-    ![image](./media/2018-09-20-12-22-00.jpg)
-1. ... Continue through the wizard. Once you reach the end you will be able to download the manifest file.
+1. Test your note taking bot by starting a conversation.
 
-1. ...
+![image](./media/2018-09-20-12-22-00.jpg)
 
-
-
-
-1. ...
 
 [Back to top](#content)
 
