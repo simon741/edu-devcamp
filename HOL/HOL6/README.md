@@ -18,7 +18,6 @@
     * [Install App Studio](#ex6b)
     * [Create an app manifest file](#ex6c)
     * [Install the bot](#ex6d)
-* [Continue with lab 7](#continue)
 
 ---
 
@@ -610,14 +609,6 @@ To create a manifest file that can be uploaded by the users:
 
 
 1. ...
-
-[Back to top](#content)
-
----
-
-## Continue with lab 7
-
-You are now ready to start hands-on lab 7. [View HOL 7 instructions](../HOL5).
 
 [Back to top](#content)
 

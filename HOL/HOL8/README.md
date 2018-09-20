@@ -4,6 +4,7 @@
 * [Overview](#overview)
 * [Prerequisites](#prerequisites)
 * [Exercise 1: Create a class schedule app](#ex1)
+* [Continue with lab 7](#continue)
 
 ---
 
@@ -124,5 +125,12 @@ Microsoft PowerApps are a very fast way to create apps based on your data. The s
 
 ---
 
+## Continue with lab 7
+
+You are now ready to start hands-on lab 7. [View HOL 7 instructions](../HOL5).
+
+[Back to top](#content)
+
+---
 
 Copyright 2018 Microsoft Corporation. All rights reserved. Except where otherwise noted, these materials are licensed under the terms of the MIT License. You may use them according to the license as is most appropriate for your project. The terms of this license can be found at https://opensource.org/licenses/MIT.

@@ -68,25 +68,11 @@
 * [Exercise 1: Coming soon](HOL5/#ex1)
 
 ---
-## HOL 6 - Bot Framework and Cognitive Services
+## HOL 6 - Microsoft PowerApps
 
 * [Overview](HOL6/#overview)
 * [Prerequisites](HOL6/#prerequisites)
-* [Exercise 1: Create a Language Understanding bot with Bot Service](HOL6/#ex1)
-* [Exercise 2: Try the bot](HOL6/#ex2)
-* [Exercise 3: Modify the LUIS app](HOL6/#ex3)
-* [Exercise 4: Modify the bot code](HOL6/#ex4)
-    * [Edit the default message handler](HOL6/#ex4a)
-    * [Handle the Note.Create intent](HOL6/#ex4b)
-    * [Handle the Note.Delete intent](HOL6/#ex4c)
-    * [Handle the Note.ReadAloud intent](HOL6/#ex4d)
-    * [The completed code](HOL6/#ex4e)
-* [Exercise 5: Test the bot](HOL6/#ex5)
-* [Exercise 6: Add the bot to Teams](HOL6/#ex6)
-    * [Add the Microsoft Teams channel](HOL6/#ex6a)
-    * [Install App Studio](HOL6/#ex6b)
-    * [Create an app manifest file](HOL6/#ex6c)
-    * [Install the bot](HOL6/#ex6d)
+* [Exercise 1: Create a class schedule app](HOL6/#ex1)
 
 ---
 ## HOL 7 - Microsoft Azure Machine Learning
@@ -100,11 +86,25 @@
 * [Exercise 3: Set up a web service](HOL7/#ex3)
 
 ---
-## HOL 8 - Microsoft PowerApps
+## HOL 8 - Bot Framework and Cognitive Services
 
 * [Overview](HOL8/#overview)
 * [Prerequisites](HOL8/#prerequisites)
-* [Exercise 1: Create a class schedule app](HOL8/#ex1)
+* [Exercise 1: Create a Language Understanding bot with Bot Service](HOL8/#ex1)
+* [Exercise 2: Try the bot](HOL8/#ex2)
+* [Exercise 3: Modify the LUIS app](HOL8/#ex3)
+* [Exercise 4: Modify the bot code](HOL8/#ex4)
+    * [Edit the default message handler](HOL8/#ex4a)
+    * [Handle the Note.Create intent](HOL8/#ex4b)
+    * [Handle the Note.Delete intent](HOL8/#ex4c)
+    * [Handle the Note.ReadAloud intent](HOL8/#ex4d)
+    * [The completed code](HOL8/#ex4e)
+* [Exercise 5: Test the bot](HOL8/#ex5)
+* [Exercise 6: Add the bot to Teams](HOL8/#ex6)
+    * [Add the Microsoft Teams channel](HOL8/#ex6a)
+    * [Install App Studio](HOL8/#ex6b)
+    * [Create an app manifest file](HOL8/#ex6c)
+    * [Install the bot](HOL8/#ex6d)
 
 ---
 
