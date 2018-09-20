@@ -83,6 +83,10 @@
     * [The completed code](HOL6/#ex4e)
 * [Exercise 5: Test the bot](HOL6/#ex5)
 * [Exercise 6: Add the bot to Teams](HOL6/#ex6)
+    * [Add the Microsoft Teams channel](HOL6/#ex6a)
+    * [Install App Studio](HOL6/#ex6b)
+    * [Create an app manifest file](HOL6/#ex6c)
+    * [Install the bot](HOL6/#ex6d)
 
 ---
 ## HOL 7 - Microsoft Azure Machine Learning
