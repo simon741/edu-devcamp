@@ -129,7 +129,7 @@ Your LUIS app now distinguishes between more intents. Next you are going to modi
 
     ![image](./media/2018-09-20-09-22-00.jpg)
 
-### Create a team<a name="ex4a"></a>
+### Edit the default message handler<a name="ex4a"></a>
 
 1. Change the welcome message to explain the bot's function and create a session to store the notes. The bot has a default message handler. Edit it to match the following:
 
