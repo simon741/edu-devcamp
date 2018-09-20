@@ -574,15 +574,19 @@ To create a manifest file that can be uploaded by the users:
 
     ![image](./media/2018-06-29-10-08-00.jpg)
 
-1. Provide details for all fields. Click `Generate` to generate a new App ID. Upload two icon files in the `Branding` section.
+1. Provide details for all fields. The only important value is the `App ID`. TODO
 
     ![image](./media/2018-09-20-11-54-00.jpg)
+
+1. Download the two icon files [32.png](./assets/32.png) and [192.png](./assets/192.png) and upload them in the `Branding` section.
 
     ![image](./media/2018-09-20-11-56-00.jpg)
 
 1. After you have completed the `Details` -> `App details` page click `Capabilities` -> `Bots` on the left hand menu to go to the next page. Click the `Set up` button.
 
     ![image](./media/2018-09-20-11-57-00.jpg)
+
+1. Choose the `Existing bot` tab and 
 
     ![image](./media/2018-09-20-12-05-00.jpg)
 
