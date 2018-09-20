@@ -10,7 +10,7 @@
     * [Service Workers](#ex1d)
 * [Exercise 2: Customize the PWA](#ex2)
 * [Download the finished PWA solution](#download)
-* [Continue with lab 3](#continue)
+* [Continue with lab 4](#continue)
 
 ---
 
@@ -353,9 +353,9 @@ If you want to skip this hands-on-lab or if you run into any problems you can do
 
 ---
 
-## Continue with lab 3<a name="continue"></a>
+## Continue with lab 4<a name="continue"></a>
 
-You are now ready to start hands-on lab 3. [View HOL 3 instructions](../HOL3).
+You are now ready to start hands-on lab 4. [View HOL 4 instructions](../HOL3).
 
 [Back to top](#content)
 

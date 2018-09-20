@@ -10,12 +10,20 @@
     * [Create an Assignment](#ex2c)
 * [Exercise 3: View demo data as teacher and student](#ex3)
 * [Exercise 4: Create a Teams app](#ex4)
-* [Continue with lab 4](#continue)
+    * [Create an app service in Azure](#ex4a)
+    * [Register a new app](#ex4b)
+    * [Write your app](#ex4c)
+    * [Allow external apps in Teams](#ex4d)
+    * [Upload and test your new tab](#ex4e)
+    * [Install your app in teams](#ex4f)
+* [Continue with lab 3](#continue)
 
 ---
 
 ## Overview<a name="overview"></a>
 In this lab, you will set up Microsoft Teams on your system, create your first team and create a custom Teams app hosted in Microsoft Azure.
+
+**This lab is a requirement for hands-on lab 6!**
 
 [Back to top](#content)
 
@@ -159,7 +167,7 @@ To see the demo data you created in [HOL 0](./../HOL0) you have to use Teams as 
 ## Exercise 4: Create a Teams app<a name="ex4"></a>
 Now you will add your own tab app to Teams. A tab app is a web application that runs within the teams client. The app will be hosted as an Azure app service. Some preparations are necessary before you can start coding.
 
-### Create an app service in Azure
+### Create an app service in Azure<a name="ex4a"></a>
 
 You need the Azure trial subscription created in HOL 0.
 
@@ -187,7 +195,7 @@ You need the Azure trial subscription created in HOL 0.
 
     ![image](./media/2018-09-05-11-14-00.jpg)
 
-### Register a new app
+### Register a new app<a name="ex4b"></a>
 
 For your app to be able to gain permissions to Microsoft Graph API you will need an app id.
 
@@ -225,7 +233,7 @@ For your app to be able to gain permissions to Microsoft Graph API you will need
 
     ![image](./media/2018-09-06-16-02-00.jpg)
 
-### Write your app
+### Write your app<a name="ex4c"></a>
 
 This simple sample app will demonstrate the abilities of tabs and demonstrate how to access the Graph API from within the context of an integrated app. It is based on [this](https://gsexdev.blogspot.com/2018/06/building-microsoft-teams-tab.html) by Glen Scales.
 
@@ -261,7 +269,7 @@ This simple sample app will demonstrate the abilities of tabs and demonstrate ho
 
 1. Take the three files in the folder (`manifest.json`, `32.png`, `192.png`) and turn them into a zip compressed folder. Name it `manifest.zip`.
 
-### Allow external apps in Teams
+### Allow external apps in Teams<a name="ex4d"></a>
 
 You must configure your Office 365 to allow Teams the use of external apps (that you uploaded yourself).
 
@@ -280,7 +288,7 @@ You must configure your Office 365 to allow Teams the use of external apps (that
 
     ![image](./media/2018-06-28-16-17-30.jpg)
 
-### Upload and test your new tab
+### Upload and test your new tab<a name="ex4e"></a>
 
 There are many ways to deploy an Azure web app. If you develop in Visual Studio you can use the publish feature to upload your apps. Azure also features support for VSTS integration, Github, OneDrive, FTP and some other services. The most hassle-free way to deploy this simple web app is to use the Zip Deploy feature of Azure's Kudu UI.
 
@@ -302,7 +310,7 @@ There are many ways to deploy an Azure web app. If you develop in Visual Studio 
 
 1. If your deployment succeeded you will see the `Show classmates` button.
 
-### Install your app in teams
+### Install your app in teams<a name="ex4f"></a>
 
 Now it is time to add your app as a tab in Microsoft Teams. Since some of the Graph API calls (currently) require admin rights you will first elevate a teacher to admin level to test your app.
 
@@ -354,51 +362,14 @@ Now it is time to add your app as a tab in Microsoft Teams. Since some of the Gr
 
 Your app is now running as a tab in Microsoft teams. Whenever you update the files in the Azure App Service the tab will change accordingly.
 
-### Install App Studio
-
-Microsoft Teams includes an app that helps you create your own apps. This is App Studio. You can find it in the store.
-
-1. In Microsoft Teams click `Store` which can be found on the bottom left.
-
-    ![image](./media/2018-06-28-16-48-00.jpg)
-
-1. Use the search to find `App Studio`.
-
-    ![image](./media/2018-06-29-10-04-00.jpg)
-
-1. Select `App Studio` and click `Install`.
-
-    ![image](./media/2018-06-29-10-04-30.jpg)
-
-### Create an app manifest file
-
-App Studio will create the manifest files for your new apps including creating an app id, two steps you did manually in the previous exercise. It also provides ready to use controls for your user interface. To create a manifest file:
-
-1. Click `Open` next to `App`.
-
-    ![image](./media/2018-06-29-10-05-00.jpg)
-
-1. On the welcome screen click `Create a new app`.
-
-    ![image](./media/2018-06-29-10-08-00.jpg)
-
-1. Provide details for all fields. Click `Generate` to generate a new App ID. Upload two icon files in the `Branding` section.
-
-    ![image](./media/2018-07-18-11-46-00.jpg)
-
-1. After you have completed the `Details` -> `App details` page click `Capabilities` -> `Tabs` on the left hand menu to go to the next page. Click the `Add` button below `Team tab`.
-
-    ![image](./media/2018-07-18-11-48-00.jpg)
-
-1. Continue through the wizard. Once you reach the end you will be able to download the manifest file.
 
 [Back to top](#content)
 
 ---
 
-## Continue with lab 4<a name="continue"></a>
+## Continue with lab 3<a name="continue"></a>
 
-You are now ready to start hands-on lab 4. [View HOL 4 instructions](../HOL4).
+You are now ready to start hands-on lab 3. [View HOL 3 instructions](../HOL3).
 
 [Back to top](#content)
 

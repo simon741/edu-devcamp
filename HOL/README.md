@@ -19,7 +19,26 @@
 * [Exercise 2: Using Graph Explorer](HOL1/#ex2)
 
 ---
-## HOL 2 - Progressive Web Apps
+## HOL 2 - Microsoft Teams
+
+* [Overview](HOL2/#overview)
+* [Prerequisites](HOL2/#prerequisites)
+* [Exercise 1: Set up Microsoft Teams](HOL2/#ex1)
+* [Exercise 2: Create a new team](HOL2/#ex2)
+    * [Create a team](HOL2/#ex2a)
+    * [Create a Class Notebook](HOL2/#ex2b)
+    * [Create an Assignment](HOL2/#ex2c)
+* [Exercise 3: View demo data as teacher and student](HOL2/#ex3)
+* [Exercise 4: Create a Teams app](HOL2/#ex4)
+    * [Create an app service in Azure](HOL2/#ex4a)
+    * [Register a new app](HOL2/#ex4b)
+    * [Write your app](HOL2/#ex4c)
+    * [Allow external apps in Teams](HOL2/#ex4d)
+    * [Upload and test your new tab](HOL2/#ex4e)
+    * [Install your app in teams](HOL2/#ex4f)
+
+---
+## HOL 3 - Progressive Web Apps
 
 * [Overview](HOL2/#overview)
 * [Prerequisites](HOL2/#prerequisites)
@@ -30,19 +49,6 @@
     * [Service Workers](HOL2/#ex1d)
 * [Exercise 2: Customize the PWA](HOL2/#ex2)
 * [Download the finished PWA solution](HOL2/#download)
-
----
-## HOL 3 - Microsoft Teams
-
-* [Overview](HOL3/#overview)
-* [Prerequisites](HOL3/#prerequisites)
-* [Exercise 1: Set up Microsoft Teams](HOL3/#ex1)
-* [Exercise 2: Create a new team](HOL3/#ex2)
-    * [Create a team](HOL3/#ex2a)
-    * [Create a Class Notebook](HOL3/#ex2b)
-    * [Create an Assignment](HOL3/#ex2c)
-* [Exercise 3: View demo data as teacher and student](HOL3/#ex3)
-* [Exercise 4: Create a Teams app](HOL3/#ex4)
 
 ---
 ## HOL 4 - Monitoring with Application Insights
@@ -70,7 +76,13 @@
 * [Exercise 2: Try the bot](HOL6/#ex2)
 * [Exercise 3: Modify the LUIS app](HOL6/#ex3)
 * [Exercise 4: Modify the bot code](HOL6/#ex4)
+    * [Edit the default message handler](HOL6/#ex4a)
+    * [Handle the Note.Create intent](HOL6/#ex4b)
+    * [Handle the Note.Delete intent](HOL6/#ex4c)
+    * [Handle the Note.ReadAloud intent](HOL6/#ex4d)
+    * [The completed code](HOL6/#ex4e)
 * [Exercise 5: Test the bot](HOL6/#ex5)
+* [Exercise 6: Add the bot to Teams](HOL6/#ex6)
 
 ---
 ## HOL 7 - Microsoft Azure Machine Learning
