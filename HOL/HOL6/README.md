@@ -1,28 +1,15 @@
-# Bot Framework and Cognitive Services
+# Microsoft PowerApps
 
 ## Content<a name="content"></a>
 * [Overview](#overview)
 * [Prerequisites](#prerequisites)
-* [Exercise 1: Create a Language Understanding bot with Bot Service](#ex1)
-* [Exercise 2: Try the bot](#ex2)
-* [Exercise 3: Modify the LUIS app](#ex3)
-* [Exercise 4: Modify the bot code](#ex4)
-    * [Edit the default message handler](#ex4a)
-    * [Handle the Note.Create intent](#ex4b)
-    * [Handle the Note.Delete intent](#ex4c)
-    * [Handle the Note.ReadAloud intent](#ex4d)
-    * [The completed code](#ex4e)
-* [Exercise 5: Test the bot](#ex5)
-* [Exercise 6: Add the bot to Teams](#ex6)
-    * [Add the Microsoft Teams channel](#ex6a)
-    * [Install App Studio](#ex6b)
-    * [Create an app manifest file](#ex6c)
-    * [Install the bot](#ex6d)
+* [Exercise 1: Create a class schedule app](#ex1)
+* [Continue with lab 7](#continue)
 
 ---
 
 ## Overview<a name="overview"></a>
-In this lab, you will learn how to create an Azure bot, make it available in Teams and use Language Understanding to identify the user's intent. The bot will help the students by taking notes for them.
+In this lab, you will create an app using PowerApps.
 
 [Back to top](#content)
 
@@ -31,584 +18,116 @@ In this lab, you will learn how to create an Azure bot, make it available in Tea
 ## Prerequisites<a name="prerequisites"></a>
 
 * Complete [HOL 0](./../HOL0) to set up an Azure account.
-* Complete [HOL 2](./../HOL2) to install the Microsoft Teams client and to allow allow external apps in Teams.
 
 [Back to top](#content)
 
 ---
 
-## Exercise 1: Create a Language Understanding bot with Bot Service<a name="ex1"></a>
+## Exercise 1: Create a class schedule app<a name="ex1"></a>
+Microsoft PowerApps are a very fast way to create apps based on your data. The sample data contains a class schedule and the resulting app can be used to browse the classes.
 
-1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to [portal.azure.com](https://portal.azure.com) and sign in. Select `Create new resource` in the menu blade and search for `bot`.
+1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome)
+ and browse to [web.powerapps.com](https://web.powerapps.com/). Sign in and PowerApps Studio will load. On the home screen create a new app by selecting `Start from data`.
 
-    ![image](./media/2018-09-19-13-12-00.jpg)
+    ![image](./media/2018-09-14-11-54-00.jpg)
 
-1. Select the `Web App Bot` from the results.
+1. Click `Make this app`.
 
-1. In the `Bot Service blade`, provide the required information, and click `Create`. This creates and deploys the bot service and LUIS app to Azure.
+    ![image](./media/2018-09-14-11-55-00.jpg)
 
-    1. Set `App name` to your bot's name. The name is used as the subdomain when your bot is deployed to the cloud (for example, `edcbot.azurewebsites.net`). This name is also used as the name of the LUIS app associated with your bot. Copy it to use later, to find the LUIS app associated with the bot.
+1. A new window will open. Confirm your region and click `Get started`.
 
-    1. Select the `subscription`, `resource group`, `App service plan`, and `location`.
+    ![image](./media/2018-09-14-11-57-00.jpg)
 
-    1. Select the `Language understanding (Node.js)` template for the `Bot template` field.
+1. To connect data to be used as a basis for your app click `Phone layout` on the `OneDrive for Business` tile.
 
-    1. Note that Azure will automatically create a storage and an App ID for your bot.
+    ![image](./media/2018-09-14-11-58-00.jpg)
 
-    ![image](./media/2018-09-19-10-57-00.jpg)
+1. Click `Create` and you will be redirected to a list of your OneDrive files.
 
-1. Confirm that the bot service has been deployed. Click `Notifications` (the bell icon that is located along the top edge of the Azure portal). The notification will change from `Deployment started` to `Deployment succeeded`. After the notification changes to `Deployment succeeded`, click `Go to resource` on that notification.
+    ![image](./media/2018-09-14-12-04-00.jpg)
+
+1. Open a new browser tab and navigate to [portal.office.com](https://portal.office.com/), sign in and click the `OneDrive` icon.
+
+    ![image](./media/2018-09-14-12-07-00.jpg)
+
+1. Download the prepared sample data [Classes.xlsx](./assets/Classes.xlsx) from the assets folder and upload it to OneDrive.
+
+    ![image](./media/2018-09-14-12-10-00.jpg)
+
+1. Return to the PowerApps tab and click the refresh button on the right to refresh your OneDrive files. Click `Classes.xlsx` next.
+
+    ![image](./media/2018-09-14-12-12-00.jpg)
+
+1. Select the `Schedule` table contained in the Excel file and click `Connect` at the bottom of the screen.
+
+    ![image](./media/2018-09-14-12-13-00.jpg)
+
+1. Click `Skip` to close the welcome message and to see a preview of the app that has been created for you.
+
+    ![image](./media/2018-09-14-12-18-00.jpg)
+
+    ![image](./media/2018-09-14-12-19-00.jpg)
+
+1. PowerApps Studio created a mobile app with three screens (you can see a list of the screens and their components on the left of the editor) and populated it with the sample data. As you can see the selection of displayed columns the app generator made is not ideal but you can easily change that. The `browse screen` shows a list of tiles. If you change one all the others will change accordingly. In the screens list on the left you can see that each time consists of a Separator, a NextArrow icon and three texts: Body, Subtitle and Title. When you select `Subtitle` the formula of the text will be displayed on the top of the screen. The current formula is `ThisItem.Day`.
+
+    ![image](./media/2018-09-14-12-24-00.jpg)
+
+1. Change the formula to `ThisItem.Day&" - "&Left(ThisItem.Time,5)` and note how the text on all tiles changes to include not only the day but also the time of the class. Select the `Body` text next. The current formula is `ThisItem.DayOfWeek`. This is a numeric value that we included in the sample data to sort the classes but it is not a value you want to display to the user of the app.
+
+    ![image](./media/2018-09-14-12-30-00.jpg)
+
+1. Change the formula to `ThisItem.Teacher` which is much more useful to the users. Select the `IconNewItem` next.
+
+    ![image](./media/2018-09-14-12-33-00.jpg)
+
+1. Since the class schedule is fixed there is no need for an add button. Right-click and delete it. Notice that the menu on top of the app will collapse. The reason is that the items on the menu have been positioned with formulas that contain a (now broken) reference to the deleted icon. PowerApps Studio highlights the errors in red. Click on one of the red icons to fix the first error. The formula containing the error will be displayed in the formula editor. Remove the `- IconNewItem1.With` part to fix the formula. Repeat the process for all red icons.
+
+    ![image](./media/2018-09-14-12-44-00.jpg)
+
+1. Next you are going to change the sort order of the tiles. By default they have been sorted by the class name. You are going to change that order to day and time. Select the `BrowseGallery` and change the formula to `SortByColumns(Search(Schedule, TextSearchBox1.Text, "Class","Teacher","Day"), "DayOfWeek", If(SortDescending1, Descending, Ascending), "Time", If(SortDescending1, Descending, Ascending))` and note how the Monday classes are now at the top of the list. By changing the formula you also changed the columns that will be searched when the user types something in the search field above the schedule. Now the columns `Class`, `Teacher` and `Day` will be considered. So the user could type search terms like `Science`, `John` or `Friday` to filter the list.
+
+    ![image](./media/2018-09-14-12-51-00.jpg)
+
+1. The home screen is now finished. Let's move on to the details screen. Select it and delete the `DayOfWeek_DataCard` from the `DetailForm` by right-clicking it.
+
+    ![image](./media/2018-09-14-12-57-00.jpg)
+
+1. Next remove the `IconDelete` and `IconEdit`. This will again collapse the menu on top of the screen. Fix the errors like before by clicking the red icon next to `LblAppName` and removing ` - IconDelete1.Width - IconEdit1.Width` from the formulas.
+
+    ![image](./media/2018-09-14-13-01-00.jpg)
+
+1. The details screen is now finished. The last thing to do is remove the unnecessary edit screen. Select it and delete it by right-clicking it.
+
+    ![image](./media/2018-09-14-13-03-00.jpg)
+
+1. Your app is finished. Click `File` -> `Save`, enter a name for the app and click `Save` at the bottom of the page.
+
+    ![image](./media/2018-09-14-13-05-00.jpg)
+
+    ![image](./media/2018-09-14-13-07-00.jpg)
+
+1. Close the tab and return to the PowerApps home page. When you click `Apps` you will find your new app.
+
+    ![image](./media/2018-09-14-13-10-00.jpg)
+
+1. Click the three dots and select `Play` to test your app. A new tab will open showing you a phone emulator running your app.
+
+    ![image](./media/2018-09-14-13-11-00.jpg)
+
+    ![image](./media/2018-09-14-13-15-00.jpg)
+
+1. Click the arrows to see the details of a class or type into the search to filter the displayed classes.
+
+    ![image](./media/2018-09-14-13-20-00.jpg)
 
 [Back to top](#content)
 
 ---
 
-## Exercise 2: Try the bot<a name="ex2"></a>
+## Continue with lab 7
 
-1. Once the bot is registered, click `Test in Web Chat` to open the Web Chat pane. Type `hello` in Web Chat. The bot responds by saying `You have reached Greeting. You said: hello`. This confirms that the bot has received your message and passed it to a default LUIS app that it created. This default LUIS app detected a Greeting intent.
-
-    ![image](./media/2018-09-19-13-22-00.jpg)
-
-1. Try `can you help me?` and see how the bot recognizes your help intend.
-
-    ![image](./media/2018-09-19-13-23-00.jpg)
-
-1. And `I wish to cancel` or variations of the texts.
-
-    ![image](./media/2018-09-19-13-24-00.jpg)
-
-Your bot is now running and can recognize some basic intents. Next you are going to add intents that correspond to taking and deleting notes.
-
-[Back to top](#content)
-
----
-
-## Exercise 3: Modify the LUIS app<a name="ex3"></a>
-
-1. Log in to [www.luis.ai/applications](https://www.luis.ai/applications) using the same account you use to log in to Azure. Click on `My apps` if you are not redirected automatically. In the list of apps, find the app that begins with the name specified in `App name` in the Bot Service blade when you created the Bot Service.
-
-    ![image](./media/2018-09-19-12-53-00.jpg)
-
-1. The LUIS app starts with 4 intents: `Cancel`, `Greeting`, `Help`, and `None`. Click on `Add prebuilt intent` in the top menu. Type `note` in the search box.
-
-    ![image](./media/2018-09-19-12-55-00.jpg)
-
-1. Select `Node.Create`, `Node.Delete` and `Note.ReadAloud` and click `Done`.
-
-    ![image](./media/2018-09-19-12-57-00.jpg)
-
-1. Click the `Train` button in the upper right to train your app.
-
-    ![image](./media/2018-09-19-12-58-00.jpg)
-
-1. Click the `Publish` button in the upper right to train your app.
-
-    ![image](./media/2018-09-19-12-59-00.jpg)
-
-1. Confirm the `Environment` by clicking `Publish` in the dialog.
-
-    ![image](./media/2018-09-19-13-00-00.jpg)
-
-Your LUIS app now distinguishes between more intents. Next you are going to modify your bot to react to these new intents.
-
-[Back to top](#content)
-
----
-
-## Exercise 4: Modify the bot code<a name="ex4"></a>
-
-1. Return to the Azure Portal and go to the `App Service` associated with your bot. From the menu click `App Service Editor (Preview)`.
-
-    ![image](./media/2018-09-20-09-09-00.jpg)
-
-1. Click `Go`.
-
-    ![image](./media/2018-09-20-09-19-00.jpg)
-
-1. Select the `app.js` file. This is the code your bot is currently running. You can also find the sample code described in [this article](https://github.com/Microsoft/BotFramework-Samples/tree/master/docs-samples/Node/basics-naturalLanguage) in the Notes bot sample. The article contains more ideas on how to improve your LUIS bot.
-
-    ![image](./media/2018-09-20-09-22-00.jpg)
-
-### Create a team<a name="ex4a"></a>
-
-1. Change the welcome message to explain the bot's function and create a session to store the notes. The bot has a default message handler. Edit it to match the following:
-
-    ```javascript
-    // Create your bot with a function to receive messages from the user.
-    // This default message handler is invoked if the user's utterance doesn't
-    // match any intents handled by other dialogs.
-    var bot = new builder.UniversalBot(connector, function (session, args) {
-        session.send("Hello student. I'm a note taking bot. I can create new notes, read saved notes to you and delete notes.");
-    
-       // If the object for storing notes in session.userData doesn't exist yet, initialize it
-       if (!session.userData.notes) {
-           session.userData.notes = {};
-           console.log("initializing userData.notes in default message handler");
-       }
-    });
-    ```
-
-### Handle the Note.Create intent<a name="ex4b"></a>
-
-1. When the LUIS app recognizes a note creation intent the bot has to react by interacting with the student to gather all the necessary data. A new dialog will do this .Copy the following code and paste it at the end of `app.js`:
-
-    ```javascript
-    // CreateNote dialog
-    bot.dialog('CreateNote', [
-        function (session, args, next) {
-            // Resolve and store any Note.Title entity passed from LUIS.
-            var intent = args.intent;
-            var title = builder.EntityRecognizer.findEntity(intent.entities, 'Note.Title');
-    
-            var note = session.dialogData.note = {
-              title: title ? title.entity : null,
-            };
-            
-            // Prompt for title
-            if (!note.title) {
-                builder.Prompts.text(session, 'What would you like to call your note?');
-            } else {
-                next();
-            }
-        },
-        function (session, results, next) {
-            var note = session.dialogData.note;
-            if (results.response) {
-                note.title = results.response;
-            }
-    
-            // Prompt for the text of the note
-            if (!note.text) {
-                builder.Prompts.text(session, 'What would you like to say in your note?');
-            } else {
-                next();
-            }
-        },
-        function (session, results) {
-            var note = session.dialogData.note;
-            if (results.response) {
-                note.text = results.response;
-            }
-            
-            // If the object for storing notes in session.userData doesn't exist yet, initialize it
-            if (!session.userData.notes) {
-                session.userData.notes = {};
-                console.log("initializing session.userData.notes in CreateNote dialog");
-            }
-            // Save notes in the notes object
-            session.userData.notes[note.title] = note;
-    
-            // Send confirmation to user
-            session.endDialog('Creating note named "%s" with text "%s"',
-                note.title, note.text);
-        }
-    ]).triggerAction({ 
-        matches: 'Note.Create',
-        confirmPrompt: "This will cancel the creation of the note you started. Are you sure?" 
-    }).cancelAction('cancelCreateNote', "Note canceled.", {
-        matches: /^(cancel|nevermind)/i,
-        confirmPrompt: "Are you sure?"
-    });
-    ```
-
-1. Any entities in the utterance are passed to the dialog using the `args` parameter. The first step of the waterfall calls `EntityRecognizer.findEntity` to get the title of the note from any `Note.Title` entities in the LUIS response. If the LUIS app didn't detect a `Note.Title` entity, the bot prompts the user for the name of the note. The second step of the waterfall prompts for the text to include in the note. Once the bot has the text of the note, the third step uses `session.userData` to save the note in a `notes` object, using the title as the key. For more information on `session.UserData` see [Manage state data](https://docs.microsoft.com/en-us/azure/bot-service/nodejs/bot-builder-nodejs-state?view=azure-bot-service-3.0).
-
-### Handle the Note.Delete intent<a name="ex4c"></a>
-
-1. Just as for the `Note.Create` intent, the bot examines the `args` parameter for a `title`. If no title is detected, the bot prompts the user. The title is used to look up the note to delete from `session.userData.notes`. Copy the following code and paste it at the end of `app.js`:
-
-    ```javascript
-    // Delete note dialog
-    bot.dialog('DeleteNote', [
-        function (session, args, next) {
-            if (noteCount(session.userData.notes) > 0) {
-                // Resolve and store any Note.Title entity passed from LUIS.
-                var title;
-                var intent = args.intent;
-                var entity = builder.EntityRecognizer.findEntity(intent.entities, 'Note.Title');
-                if (entity) {
-                    // Verify that the title is in our set of notes.
-                    title = builder.EntityRecognizer.findBestMatch(session.userData.notes, entity.entity);
-                }
-                
-                // Prompt for note name
-                if (!title) {
-                    builder.Prompts.choice(session, 'Which note would you like to delete?', session.userData.notes);
-                } else {
-                    next({ response: title });
-                }
-            } else {
-                session.endDialog("No notes to delete.");
-            }
-        },
-        function (session, results) {
-            delete session.userData.notes[results.response.entity];        
-            session.endDialog("Deleted the '%s' note.", results.response.entity);
-        }
-    ]).triggerAction({
-        matches: 'Note.Delete'
-    }).cancelAction('cancelDeleteNote', "Ok - canceled note deletion.", {
-        matches: /^(cancel|nevermind)/i
-    });
-    ```
-
-1. The code that handles `Note.Delete` uses the `noteCount` function to determine whether the `notes` object contains notes. Paste the `noteCount` helper function at the end of `app.js`.
-
-    ```javascript
-    // Helper function to count the number of notes stored in session.userData.notes
-    function noteCount(notes) {
-    
-        var i = 0;
-        for (var name in notes) {
-            i++;
-        }
-        return i;
-    }
-    ```
-
-### Handle the Note.ReadAloud intent<a name="ex4c"></a>
-
-1. Finally add a function that returns the content of the stored notes to the user. Copy the following code and paste it in `app.js` after the handler for `Note.Delete`:
-
-    ```javascript
-    // Read note dialog
-    bot.dialog('ReadNote', [
-        function (session, args, next) {
-            if (noteCount(session.userData.notes) > 0) {
-               
-                // Resolve and store any Note.Title entity passed from LUIS.
-                var title;
-                var intent = args.intent;
-                var entity = builder.EntityRecognizer.findEntity(intent.entities, 'Note.Title');
-                if (entity) {
-                    // Verify it's in our set of notes.
-                    title = builder.EntityRecognizer.findBestMatch(session.userData.notes, entity.entity);
-                }
-                
-                // Prompt for note name
-                if (!title) {
-                    builder.Prompts.choice(session, 'Which note would you like to read?', session.userData.notes);
-                } else {
-                    next({ response: title });
-                }
-            } else {
-                session.endDialog("No notes to read.");
-            }
-        },
-        function (session, results) {        
-            session.endDialog("Here's the '%s' note: '%s'.", results.response.entity, session.userData.notes[results.response.entity].text);
-        }
-    ]).triggerAction({
-        matches: 'Note.ReadAloud'
-    }).cancelAction('cancelReadNote', "Ok.", {
-        matches: /^(cancel|nevermind)/i
-    });
-    ```
-
-1. The `session.userData.notes` object is passed as the third argument to `builder.Prompts.choice`, so that the prompt displays a list of notes to the user.
-
-### The completed code<a name="ex4e"></a>
-
-1. Now that you've added handlers for the new intents, the full code for `app.js` contains the following:
-
-    ```javascript
-    var restify = require('restify');
-    var builder = require('botbuilder');
-    var botbuilder_azure = require("botbuilder-azure");
-    
-    // Setup Restify Server
-    var server = restify.createServer();
-    server.listen(process.env.port || process.env.PORT || 3978, function () {
-       console.log('%s listening to %s', server.name, server.url); 
-    });
-      
-    // Create chat connector for communicating with the Bot Framework Service
-    var connector = new builder.ChatConnector({
-        appId: process.env.MicrosoftAppId,
-        appPassword: process.env.MicrosoftAppPassword,
-        openIdMetadata: process.env.BotOpenIdMetadata 
-    });
-    
-    // Listen for messages from users 
-    server.post('/api/messages', connector.listen());
-    
-    /*----------------------------------------------------------------------------------------
-    * Bot Storage: This is a great spot to register the private state storage for your bot. 
-    * We provide adapters for Azure Table, CosmosDb, SQL Azure, or you can implement your own!
-    * For samples and documentation, see: https://github.com/Microsoft/BotBuilder-Azure
-    * ---------------------------------------------------------------------------------------- */
-    
-    var tableName = 'botdata';
-    var azureTableClient = new botbuilder_azure.AzureTableClient(tableName, process.env['AzureWebJobsStorage']);
-    var tableStorage = new botbuilder_azure.AzureBotStorage({ gzipData: false }, azureTableClient);
-    
-    // Create your bot with a function to receive messages from the user.
-    // This default message handler is invoked if the user's utterance doesn't
-    // match any intents handled by other dialogs.
-    var bot = new builder.UniversalBot(connector, function (session, args) {
-        session.send("Hello student. I'm a note taking bot. I can create new notes, read saved notes to you and delete notes.");
-    
-       // If the object for storing notes in session.userData doesn't exist yet, initialize it
-       if (!session.userData.notes) {
-           session.userData.notes = {};
-           console.log("initializing userData.notes in default message handler");
-       }
-    });
-    
-    bot.set('storage', tableStorage);
-    
-    // Make sure you add code to validate these fields
-    var luisAppId = process.env.LuisAppId;
-    var luisAPIKey = process.env.LuisAPIKey;
-    var luisAPIHostName = process.env.LuisAPIHostName || 'westus.api.cognitive.microsoft.com';
-    
-    const LuisModelUrl = 'https://' + luisAPIHostName + '/luis/v2.0/apps/' + luisAppId + '?subscription-key=' + luisAPIKey;
-    
-    // Create a recognizer that gets intents from LUIS, and add it to the bot
-    var recognizer = new builder.LuisRecognizer(LuisModelUrl);
-    bot.recognizer(recognizer);
-    
-    // CreateNote dialog
-    bot.dialog('CreateNote', [
-        function (session, args, next) {
-            // Resolve and store any Note.Title entity passed from LUIS.
-            var intent = args.intent;
-            var title = builder.EntityRecognizer.findEntity(intent.entities, 'Note.Title');
-    
-            var note = session.dialogData.note = {
-              title: title ? title.entity : null,
-            };
-            
-            // Prompt for title
-            if (!note.title) {
-                builder.Prompts.text(session, 'What would you like to call your note?');
-            } else {
-                next();
-            }
-        },
-        function (session, results, next) {
-            var note = session.dialogData.note;
-            if (results.response) {
-                note.title = results.response;
-            }
-    
-            // Prompt for the text of the note
-            if (!note.text) {
-                builder.Prompts.text(session, 'What would you like to say in your note?');
-            } else {
-                next();
-            }
-        },
-        function (session, results) {
-            var note = session.dialogData.note;
-            if (results.response) {
-                note.text = results.response;
-            }
-            
-            // If the object for storing notes in session.userData doesn't exist yet, initialize it
-            if (!session.userData.notes) {
-                session.userData.notes = {};
-                console.log("initializing session.userData.notes in CreateNote dialog");
-            }
-            // Save notes in the notes object
-            session.userData.notes[note.title] = note;
-    
-            // Send confirmation to user
-            session.endDialog('Creating note named "%s" with text "%s"',
-                note.title, note.text);
-        }
-    ]).triggerAction({ 
-        matches: 'Note.Create',
-        confirmPrompt: "This will cancel the creation of the note you started. Are you sure?" 
-    }).cancelAction('cancelCreateNote', "Note canceled.", {
-        matches: /^(cancel|nevermind)/i,
-        confirmPrompt: "Are you sure?"
-    });
-    
-    // Delete note dialog
-    bot.dialog('DeleteNote', [
-        function (session, args, next) {
-            if (noteCount(session.userData.notes) > 0) {
-                // Resolve and store any Note.Title entity passed from LUIS.
-                var title;
-                var intent = args.intent;
-                var entity = builder.EntityRecognizer.findEntity(intent.entities, 'Note.Title');
-                if (entity) {
-                    // Verify that the title is in our set of notes.
-                    title = builder.EntityRecognizer.findBestMatch(session.userData.notes, entity.entity);
-                }
-                
-                // Prompt for note name
-                if (!title) {
-                    builder.Prompts.choice(session, 'Which note would you like to delete?', session.userData.notes);
-                } else {
-                    next({ response: title });
-                }
-            } else {
-                session.endDialog("No notes to delete.");
-            }
-        },
-        function (session, results) {
-            delete session.userData.notes[results.response.entity];        
-            session.endDialog("Deleted the '%s' note.", results.response.entity);
-        }
-    ]).triggerAction({
-        matches: 'Note.Delete'
-    }).cancelAction('cancelDeleteNote', "Ok - canceled note deletion.", {
-        matches: /^(cancel|nevermind)/i
-    });
-    
-    
-    // Read note dialog
-    bot.dialog('ReadNote', [
-        function (session, args, next) {
-            if (noteCount(session.userData.notes) > 0) {
-               
-                // Resolve and store any Note.Title entity passed from LUIS.
-                var title;
-                var intent = args.intent;
-                var entity = builder.EntityRecognizer.findEntity(intent.entities, 'Note.Title');
-                if (entity) {
-                    // Verify it's in our set of notes.
-                    title = builder.EntityRecognizer.findBestMatch(session.userData.notes, entity.entity);
-                }
-                
-                // Prompt for note name
-                if (!title) {
-                    builder.Prompts.choice(session, 'Which note would you like to read?', session.userData.notes);
-                } else {
-                    next({ response: title });
-                }
-            } else {
-                session.endDialog("No notes to read.");
-            }
-        },
-        function (session, results) {        
-            session.endDialog("Here's the '%s' note: '%s'.", results.response.entity, session.userData.notes[results.response.entity].text);
-        }
-    ]).triggerAction({
-        matches: 'Note.ReadAloud'
-    }).cancelAction('cancelReadNote', "Ok.", {
-        matches: /^(cancel|nevermind)/i
-    });
-    
-    
-    // Helper function to count the number of notes stored in session.userData.notes
-    function noteCount(notes) {
-    
-        var i = 0;
-        for (var name in notes) {
-            i++;
-        }
-        return i;
-    }
-    ```
-
-1. The online code editor automatically saves all your changes. The moment you finish your code the bot is already running it.
-
-[Back to top](#content)
-
----
-
-## Exercise 5: Test the bot<a name="ex5"></a>
-
-1. Return to the Azure Portal and go to the `Web App Bot` associated with your bot. From the menu click `Test in Web Chat`. Try type messages like `Create a note`, `read my notes`, and `delete notes` to invoke the intents that you added to it. 
-
-    ![image](./media/2018-09-20-09-27-00.jpg)
-
-1. If you find that your bot doesn't always recognize the correct intent or entities, improve your LUIS app's performance by giving it more example utterances to train it. You can retrain your LUIS app without any modification to your bot's code. See [Add example utterances](https://docs.microsoft.com/en-us/azure/cognitive-services/LUIS/add-example-utterances) and [train and test your LUIS app](https://docs.microsoft.com/en-us/azure/cognitive-services/LUIS/train-test).
-
-[Back to top](#content)
-
----
-
-## Exercise 6: Add the bot to Teams<a name="ex6"></a>
-
-### Add the Microsoft Teams channel<a name="ex6a"></a>
-
-1. In the Azure Portal go to the `Web App Bot` associated with your bot. From the menu click `Channels`. Under `Add a featured channel` click the Microsoft Teams icon.
-
-    ![image](./media/2018-09-20-10-47-00.jpg)
-
-1. Agree to the `Terms of Service` by checking the box and click `Agree`.
-
-    ![image](./media/2018-09-20-10-48-00.jpg)
-
-1. You will be returned to the channel list where the new channel will be listed. Click the name of the channel.
-
-    ![image](./media/2018-09-20-10-40-00.jpg)
-
-1. This will launch the bot in the teams client.
-
-    ![image](./media/2018-09-20-11-20-00.jpg)
-
-1. Using the `Get bot embed codes` button you can create a link that can be used by users to integrate the bot in their Teams client.
-
-    ![image](./media/2018-09-20-11-29-00.jpg)
-
-### Install App Studio<a name="ex6b"></a>
-
-Microsoft Teams includes an app that helps you create your own apps. This is App Studio. You can find it in the store. App Studio will create the manifest files for your new apps including creating an app id, two steps you did manually in [HOL 2](./../HOL2). It also provides ready to use controls for your user interface. 
-
-1. In Microsoft Teams click `Store` which can be found on the bottom left.
-
-    ![image](./media/2018-06-28-16-48-00.jpg)
-
-1. Use the search to find `App Studio`.
-
-    ![image](./media/2018-06-29-10-04-00.jpg)
-
-1. Select `App Studio` and click `Install`.
-
-    ![image](./media/2018-06-29-10-04-30.jpg)
-
-### Create an app manifest file<a name="ex6c"></a>
-
-To create a manifest file that can be uploaded by the users:
-
-1. Click `Open` next to `App`.
-
-    ![image](./media/2018-06-29-10-05-00.jpg)
-
-1. On the welcome screen click `Create a new app`.
-
-    ![image](./media/2018-06-29-10-08-00.jpg)
-
-1. Provide details for all fields. Click `Generate` to generate a new App ID. Upload two icon files in the `Branding` section.
-
-    ![image](./media/2018-09-20-11-54-00.jpg)
-
-    ![image](./media/2018-09-20-11-56-00.jpg)
-
-1. After you have completed the `Details` -> `App details` page click `Capabilities` -> `Bots` on the left hand menu to go to the next page. Click the `Set up` button.
-
-    ![image](./media/2018-09-20-11-57-00.jpg)
-
-    ![image](./media/2018-09-20-12-05-00.jpg)
-
-    ![image](./media/2018-09-20-12-08-00.jpg)
-
-    ![image](./media/2018-09-20-12-14-00.jpg)
-
-### Install the bot<a name="ex6d"></a>
-
-1. Switch user accounts.
-
-    ![image](./media/2018-09-20-12-19-00.jpg)
-
-    ![image](./media/2018-09-20-12-20-00.jpg)
-
-    ![image](./media/2018-09-20-12-21-00.jpg)
-
-    ![image](./media/2018-09-20-12-22-00.jpg)
-1. ... Continue through the wizard. Once you reach the end you will be able to download the manifest file.
-
-1. ...
-
-
-
-
-1. ...
+You are now ready to start hands-on lab 7. [View HOL 7 instructions](../HOL5).
 
 [Back to top](#content)
 
