@@ -31,7 +31,7 @@ In this lab, you will set up an Office 365 Educational trial subscription, popul
 
 ## Before you start<a name="before"></a>
 
-> &#x1F53A;If you already have an Office 365 subscription, please **use an alternate browser or use private mode!** This will help avoid any issues with conflicting accounts.
+> &#x1F53A; If you already have an Office 365 subscription, please **use an alternate browser or use private mode!** This will help avoid any issues with conflicting accounts.
 >
 > Clear your browsers cache and restart your browser.
 >
@@ -39,7 +39,7 @@ In this lab, you will set up an Office 365 Educational trial subscription, popul
 >
 > Use the account created in exercise 1 for **all the following exercises and hands-on labs!**
 >
-> To register for a free trial use an e-mail address and a phone number that has **not been used for a free trial** yet!&#x1F53A;
+> To register for a free trial use an e-mail address and a phone number that has **not been used for a free trial** yet! &#x1F53A;
 
 [Back to top](#content)
 
@@ -219,6 +219,8 @@ To follow the programming examples in the upcoming hands-on labs you will need a
     ![image](./media/2018-08-30-16-50-00.jpg)
 
 Your virtual machine is now ready to use.
+
+>&#x1F53A; Even though you chose the `latest release` VM there might be new updates available for Visual Studio 2017 which are now released in very short intervals. It is **not** necessary and recommended to install these! The updates are usually quite large and the installation will take time! &#x1F53A;
 
 [Back to top](#content)
 
