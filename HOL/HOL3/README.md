@@ -160,7 +160,7 @@ You associate a service worker with your app by registering it to your site's UR
 
 For this tutorial, we'll use a ready-made "Offline page" service worker script courtesy of [PWA Builder](https://www.pwabuilder.com/serviceworker). From this, you can go on to customize it with more elaborate functionality according to your needs for performance, network bandwidth, etc. Check out Mozilla's [Service Worker Cookbook](https://serviceworke.rs/) for a number of useful service worker caching "recipe" ideas.
 
-1. Download these two JavaScript files: [pwabuilder-sw.js](./assets/pwabuilder-sw.js) and [pwabuilder-sw-register.js](./assets/pwabuilder-sw-register.js). If you have downloaded the Dev Camp content you can find the `.js` files in the folder `HOL/HOL1/assets/`.
+1. Download these two JavaScript files: [pwabuilder-sw.js](./assets/pwabuilder-sw.js) and [pwabuilder-sw-register.js](./assets/pwabuilder-sw-register.js). If you have downloaded the Dev Camp content you can find the `.js` files in the folder `HOL/HOL3/assets/`.
 
 1. Place them in the public folder of your Visual Studio web app project. (From Visual Studio, use `Ctrl + O` to open file explorer to your project and navigate to the public folder).
 
