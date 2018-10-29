@@ -166,7 +166,7 @@ To follow the programming examples in the upcoming hands-on labs you will need a
 
 1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to [portal.azure.com](https://portal.azure.com) and sign in using the e-mail address used in the previous exercise.
 
-1. Click `Virtual machines` in the menu on the left and 'Add' on the top of the page.
+1. Click `Create a resource` in the menu on the left.
 
     ![image](./media/2018-07-18-15-24-00.jpg)
 
@@ -174,21 +174,17 @@ To follow the programming examples in the upcoming hands-on labs you will need a
 
     ![image](./media/2018-07-18-15-39-00.jpg)
 
-1. From the results select `Visual Studio Community 2017 (latest release) on Windows Server 2016 Enterprise N (x64)` and click `Create` on the bottom of the page.
+1. From the results select `Visual Studio Community 2017 (latest release) on Windows Server 2016 (x64)` and click `Create` on the bottom of the page.
 
     ![image](./media/2018-08-30-13-18-00.jpg)
 
-1. Assign a name to your virtual machine and to the resource group that will be created along with the virtual machine. Enter your username and choose a password. Use your free trial as the subscription. Click `OK` at the bottom of the page.
+1. Assign a name to your virtual machine and to the resource group that will be created along with the virtual machine. Enter your username and choose a password. Select `RDP` as the available inbound port. Use your free trial as the subscription. Click `Management` at the top of the page.
 
     ![image](./media/2018-08-30-16-27-00.jpg)
 
-1. From the list of.machine sizes select `B2s` and click `Select` at the bottom of the page.
+1. Disable all monitoring. Click `Review + create` at the bottom of the page.
 
     ![image](./media/2018-08-30-16-33-00.jpg)
-
-1. Use the default settings. Click `OK` at the bottom of the page.
-
-    ![image](./media/2018-08-30-16-35-00.jpg)
 
 1. Review the summary. Click `Create` at the bottom of the page.
 
