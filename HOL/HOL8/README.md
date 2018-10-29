@@ -77,7 +77,7 @@ In this lab, you will learn how to create an Azure bot, make it available in Tea
 
     ![image](./media/2018-09-19-13-24-00.jpg)
 
-Your bot is now running and can recognize some basic intents. Next you are going to add intents that correspond to taking and deleting notes.
+Your bot is now running and can recognize some basic intents. Please note that due to the limited number of implemented intents the bot will only recognize some of your test sentences and default back to the help intent. Next you are going to add specific intents that correspond to taking and deleting notes.
 
 [Back to top](#content)
 
