@@ -174,7 +174,7 @@ To follow the programming examples in the upcoming hands-on labs you will need a
 
     ![image](./media/2018-07-18-15-39-00.jpg)
 
-1. From the results select `Visual Studio Community 2017 (latest release) on Windows Server 2016 (x64)` and click `Create` on the bottom of the page.
+1. From the results select `Visual Studio Community 2017 (latest preview) on Windows Server 2016 (x64)` and click `Create` on the bottom of the page.
 
     ![image](./media/2018-08-30-13-18-00.jpg)
 
