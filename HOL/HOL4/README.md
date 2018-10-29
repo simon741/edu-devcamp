@@ -21,7 +21,7 @@ In this lab, you will learn how to integrate Application Insights in your applic
 ## Prerequisites<a name="prerequisites"></a>
 
 * Complete [HOL 0](./../HOL0) to create a development image with Visual Studio 2017.
-* Complete [HOL 2](./../HOL2) to create a basic Progressive Web App, or use the [PWA](./../HOL2/PWA) folder from lab 2 without completing it.
+* Complete [HOL 3](./../HOL3) to create a basic Progressive Web App, or use the [PWA](./../HOL3/PWA) folder from lab 2 without completing it.
 
 [Back to top](#content)
 
@@ -68,7 +68,7 @@ We now have an instance of Application Insights created and ready for data. The 
 
 Application Insights works with a server side SDK that integrates into the NodeJS (or other web technologies) processes. We will add the SDK to our application and enable the sending of telemetry into the Application Insights service.
 
-1. Open the application in Visual Studio. Feel free to use the folder you've been using throughout the hands-on-labs, or use the [PWA](./../HOL2/PWA) folder from lab 2.
+1. Open the application in Visual Studio. Feel free to use the folder you've been using throughout the hands-on-labs, or use the [PWA](./../HOL3/PWA) folder from lab 3.
 
 1. Microsoft publishes an SDK for AppInsights on NodeJS on [GitHub](https://github.com/Microsoft/ApplicationInsights-node.js). This SDK can be installed in your project via the Visual Studio package management console.
 
