@@ -75,7 +75,7 @@ To predict future class attendance you need to create a model which has been tra
 
     ![image](./media/2018-09-13-13-38-00.jpg)
 
-1. The default setting is an 80% split, leave it at that. A random selection of 80% of your data will be available as the left output of the split operation and the other 20% will be available at the right output.
+1. Set `Fraction of rows in the first output dataset` to 0.8 creating an 80% split. A random selection of 80% of your data will be available as the left output of the split operation and the other 20% will be available at the right output.
 
     ![image](./media/2018-09-12-13-29-00.jpg)
 

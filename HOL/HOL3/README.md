@@ -59,7 +59,7 @@ For the sake of simplicity, we'll use the `Visual Studio Node.js and Express app
 
     ![image](./media/2018-06-29-13-26-00.jpg)
 
-1. Once your new project loads, note the Output window where you can see the npm packages automatically installing. When the npm packages are ready, Build (press `Ctrl + Shift + B`) (***Do not skip this step!***) and Start Debugging (`F5`). Verify that your `index.html` file is loading on [http://localhost:1337](http://localhost:1337).
+1. Once your new project loads, note the Output window where you can see the npm packages automatically installing. When the npm packages are ready, Build (press `Ctrl + Shift + B`) (**Do not skip this step!**) and Start Debugging (`F5`). Verify that your `index.html` file is loading on [http://localhost:1337](http://localhost:1337).
 
     ![image](./media/2018-06-29-16-06-00.jpg)
 

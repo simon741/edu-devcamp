@@ -98,7 +98,7 @@ Application Insights works with a server side SDK that integrates into the NodeJ
 
     ![image](./media/2018-07-23-10-54-00.jpg)
 
-1. Run your application and in the navigate around several pages to generate sample telemetry.
+1. Build (press `Ctrl + Shift + B`) (**Do not skip this step!**) and Start Debugging (`F5`). Navigate around several pages to generate sample telemetry.
 
 1. Back in the Azure Portal, refresh the browser tab (or click `Refresh` from the top toolbar) until you see data appear.
 
