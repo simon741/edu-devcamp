@@ -106,7 +106,7 @@ In this lab, you will set up an Office 365 Educational trial subscription, popul
 
     ![image](./media/2018-06-28-11-21-00.jpg)
 
-1. On the Sync Options page, select the  `new users` option. Then click upload files to upload your 6 CSV files. Once uploaded, click `Next`. In a production scenario you would usually choose to sync existing users. For a more detailed instruction on the sync process see [docs.microsoft.com/en-us/SchoolDataSync/how-to-deploy-school-data-sync-by-using-csv-files](https://docs.microsoft.com/en-us/SchoolDataSync/how-to-deploy-school-data-sync-by-using-csv-files).
+1. On the Sync Options page, select the  `new users` option. Then click upload files to upload your 6 CSV files. Once uploaded, select an arbitrary stop date in the future, click `Next`. In a production scenario you would usually choose to sync existing users. For a more detailed instruction on the sync process see [docs.microsoft.com/en-us/SchoolDataSync/how-to-deploy-school-data-sync-by-using-csv-files](https://docs.microsoft.com/en-us/SchoolDataSync/how-to-deploy-school-data-sync-by-using-csv-files).
 
     ![image](./media/2018-06-28-11-23-00.jpg)
 
@@ -170,7 +170,7 @@ To follow the programming examples in the upcoming hands-on labs you will need a
 
     ![image](./media/2018-07-18-15-24-00.jpg)
 
-1. Enter `Visual Studio 2017` in the search box.
+1. Enter `Visual Studio Community 2017` in the search box.
 
     ![image](./media/2018-07-18-15-39-00.jpg)
 
