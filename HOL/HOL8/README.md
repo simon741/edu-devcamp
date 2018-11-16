@@ -594,7 +594,7 @@ To create a manifest file that can be uploaded by the users:
 
     ![image](./media/2018-09-20-12-05-00.jpg)
 
-1. Go to `Valid domains` next end enter the URL and click `Add`.
+1. Go to `Valid domains` next, enter the URL and click `Add`.
 
     ![image](./media/2018-09-20-12-08-00.jpg)
 
@@ -622,7 +622,7 @@ To create a manifest file that can be uploaded by the users:
 
 1. Test your note taking bot by starting a conversation.
 
-![image](./media/2018-09-20-12-22-00.jpg)
+    ![image](./media/2018-09-20-12-22-00.jpg)
 
 
 [Back to top](#content)
