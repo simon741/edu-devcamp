@@ -65,7 +65,7 @@ In this lab, you will set up Microsoft Teams on your system, create your first t
 
     ![image](./media/2018-06-28-15-41-00.jpg)
 
-1. Select `Classes` as the team type.
+1. Select `Classes` as the team type. Note that you will only see these choices if you are logged in an educational tenant.
 
     ![image](./media/2018-06-28-15-41-30.jpg)
 
@@ -235,7 +235,7 @@ For your app to be able to gain permissions to Microsoft Graph API you will need
 
 ### Write your app<a name="ex4c"></a>
 
-This simple sample app will demonstrate the abilities of tabs and demonstrate how to access the Graph API from within the context of an integrated app. It is based on [this](https://gsexdev.blogspot.com/2018/06/building-microsoft-teams-tab.html) by Glen Scales.
+This simple sample app will demonstrate the abilities of tabs and demonstrate how to access the Graph API from within the context of an integrated app. It is based on [this blog post](https://gsexdev.blogspot.com/2018/06/building-microsoft-teams-tab.html) by Glen Scales.
 
 1. Download the HTML files from the [app](./assets/app) folder.
 
@@ -249,7 +249,7 @@ This simple sample app will demonstrate the abilities of tabs and demonstrate ho
 
 1. Open `auth.html`. Look for the line `clientId: "YOURAPPID",` and replace `YOURAPPID` with the `Application Id` you noted earlier when registering the app. The `auth.html` will handle the authentication of the app using ADAL (`Azure ActiveDirectory Library for JS`)
 
-1. Open `silent-end.html` and repeat the process. The `silent-end.html` is the redirect target for the authentication.
+1. Open `silent-end.html` and repeat the process. The `silent-end.html` is the redirect target for the authentication. For further information on authentication in a tab app check out [this blog post](https://techcommunity.microsoft.com/t5/Microsoft-Teams-Blog/Authentication-SSO-and-Microsoft-Graph-in-Microsoft-Teams-Tabs/ba-p/125366) which explains in detail how to do a silent authentication when possible and fall back to an explicit login window when necessary.
 
 1. Open `config.html` and replace the three occurrences of `YOURAPPNAME` for the values of `contentUrl`, `websiteUrl` and `removeUrl` with the name you choose for your Azure app. The `config.html` is called when your app is installed and sets the URLs to the content pages of the app.
 
@@ -274,7 +274,7 @@ This simple sample app will demonstrate the abilities of tabs and demonstrate ho
 You must configure your Office 365 to allow Teams the use of external apps (that you uploaded yourself).
 
 1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome)
- and browse to [portal.office.com](https://portal.office.com) and enter your O365 Global Admin account credentials. 
+ and browse to [admin.microsoft.com](https://admin.microsoft.com) and enter your O365 Global Admin account credentials. 
 
 1. Click `Services & add-ins` and select `Microsoft Teams`.
 
@@ -292,7 +292,7 @@ You must configure your Office 365 to allow Teams the use of external apps (that
 
 There are many ways to deploy an Azure web app. If you develop in Visual Studio you can use the publish feature to upload your apps. Azure also features support for VSTS integration, Github, OneDrive, FTP and some other services. The most hassle-free way to deploy this simple web app is to use the Zip Deploy feature of Azure's Kudu UI.
 
-1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to `https://YOURAPPNAME.scm.azurewebsites.net/ZipDeploy` ( again replace `YOURAPPNAME` with the name you choose for your Azure app) and sign in. You are now seeing the Advanced Tools for development. You can also reach this page via the Azure portal UI by navigating to your App Service and selecting `Advanced Tools`.
+1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to `https://YOURAPPNAME.scm.azurewebsites.net/ZipDeployUI` ( again replace `YOURAPPNAME` with the name you choose for your Azure app) and sign in. You are now seeing the Advanced Tools for development. You can also reach this page via the Azure portal UI by navigating to your App Service and selecting `Advanced Tools`.
 
     ![image](./media/2018-09-10-09-39-00.jpg)
 
