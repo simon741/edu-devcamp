@@ -171,7 +171,7 @@ Now you will add your own tab app to Teams. A tab app is a web application that 
 
 You need the Azure trial subscription created in HOL 0.
 
-1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to [teams.microsoft.com](https://portal.azure.com/). Click `App Services` on the left menu and `Add` at the top of the page.
+1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to [portal.azure.com](https://portal.azure.com/). Click `App Services` on the left menu and `Add` at the top of the page.
 
     ![image](./media/2018-09-05-10-50-00.jpg)
 
@@ -199,7 +199,7 @@ You need the Azure trial subscription created in HOL 0.
 
 For your app to be able to gain permissions to Microsoft Graph API you will need an app id.
 
-1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to [http://apps.dev.microsoft.com](http://apps.dev.microsoft.com) and sign in.
+1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to [apps.dev.microsoft.com](http://apps.dev.microsoft.com) and sign in.
 
     ![image](./media/2018-09-06-15-36-00.jpg)
 
@@ -314,7 +314,7 @@ There are many ways to deploy an Azure web app. If you develop in Visual Studio 
 
 Now it is time to add your app as a tab in Microsoft Teams. Since some of the Graph API calls (currently) require admin rights you will first elevate a teacher to admin level to test your app.
 
-1. Launch a private web browser, navigate to [admin.microsoft.com/AdminPortal](https://admin.microsoft.com/AdminPortal/) and sign in using your O365 Global Admin account credentials. Click `Users`.
+1. Launch a private web browser, navigate to [admin.microsoft.com](https://admin.microsoft.com) and sign in using your O365 Global Admin account credentials. Click `Users`.
 
     ![image](./media/2018-08-29-13-01-00.jpg)
 
