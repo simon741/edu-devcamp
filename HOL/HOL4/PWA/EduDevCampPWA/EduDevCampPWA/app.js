@@ -15,7 +15,7 @@ var classes = require('./routes/classes');
 var app = express();
 
 let appInsights = require("applicationinsights");
-appInsights.setup("3a51695a-9f9f-4d39-a86e-1e49308e4e68").start();
+appInsights.setup("YOUR_I_KEY").start();
 
 appInsights.defaultClient.commonProperties = {
     userLoggedIn: true,
