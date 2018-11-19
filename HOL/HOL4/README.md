@@ -172,7 +172,7 @@ This was a short introduction into tracking using the Application Insights SDK a
 
 ## Download the finished PWA solution<a name="download"></a>
 
-If you want to skip this hands-on-lab or if you run into any problems you can download the finished solution from the [PWA](./PWA) folder. To start debugging you have to right-click the `npm` node in the Solution Explorer and select `Update npm Packages` first.
+If you want to skip this hands-on-lab or if you run into any problems you can download the finished solution from the [PWA](./PWA) folder. To start debugging you have to right-click the `npm` node in the Solution Explorer and select `Update npm Packages` first. Don't forget to add your `Instrumentation Key` to the `app.js` file.
 
 ![image](./media/2018-07-17-11-04-00.jpg)
 
