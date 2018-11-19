@@ -56,7 +56,7 @@ In the previous hands-on-lab you created a sync to upload sample data to your Sc
 
 ## Exercise 2: Using Graph Explorer<a name="ex2"></a>
 
-When you want to utilize your data within your own applications you use the Microsoft Graph API. Microsoft provides the online Graph Explorer so you can test the queries to the API before you implement them in your application.
+When you want to utilize your data within your own applications you use the Microsoft Graph API. For example you can display information from SDS and Microsoft Teams in your application or automate common tasks like creating classes, adding students and assignments. Microsoft provides the online Graph Explorer so you can test the queries to the API before you implement them in your application.
 
 1. To access the Graph Explorer launch a private web browser, navigate to [developer.microsoft.com/en-us/graph/graph-explorer](https://developer.microsoft.com/en-us/graph/graph-explorer), click `Sign in with Microsoft`, then enter your O365 Global Admin account credentials.
 
@@ -80,11 +80,19 @@ When you want to utilize your data within your own applications you use the Micr
 
     ![image](./media/2018-07-17-12-15-00.jpg)
 
-1. Try more queries. You can find the API reference and more example queries at [developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/education-overview](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/education-overview).
+1. Try more queries. You can find the API reference and more example queries at [developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/education-overview](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/education-overview). Note that you currently can't test queries like [adding class members](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/api/educationclass_post_members) or [teachers](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/api/educationclass_post_teachers) using the Graph Explorer since it requires `EduRoster.ReadWrite.All` permissions which you can only grant to an app and not your test user accounts. But you can add them as a group member:
 
-	Query `https://graph.microsoft.com/beta/education/classes/f84c1c46-c0e2-4ec7-9993-f16246bb0102/members/` to get a list of students in the `Biology 2` class.
+    1. Query `https://graph.microsoft.com/v1.0/groups/` to get a list of all groups including the classes. Note the id of classes `Science - Biology 2` and `Math - Algebra 1`.
 
-    Using the API it is possible to read and write roster information and even management of the School Data Sync.
+    1. Query `https://graph.microsoft.com/v1.0/groups/<ID OF Science - Biology 2>/members/` to get a list of students in the `Science - Biology 2` class. Note the id of a students.
+
+    1. Change the request method from `GET` to `POST`. Query `https://graph.microsoft.com/v1.0/groups/<ID OF Math - Algebra 1>/members/$ref` with `{ "@odata.id":"https://graph.microsoft.com/v1.0/users/2f6b8544-4e3e-4e03-a17b-15d980343d85" }` in the `Request Body` field. Make sure you add the [required permissions](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_post_members) to your own account.
+
+        ![image](./media/2018-11-16-15-54-00.jpg)
+
+    1. If you check the members of the `Math - Algebra 1` now you will see the added student in the list.
+
+    Using the API it is possible to read and write roster information and even management of the School Data Sync. The Graph Explorer is a great tool to help you tweak your queries.
 
 [Back to top](#content)
 
