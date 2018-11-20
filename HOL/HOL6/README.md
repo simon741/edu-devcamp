@@ -127,7 +127,7 @@ Microsoft PowerApps are a very fast way to create apps based on your data. The s
 
 ## Continue with lab 7
 
-You are now ready to start hands-on lab 7. [View HOL 7 instructions](../HOL5).
+You are now ready to start hands-on lab 7. [View HOL 7 instructions](../HOL7).
 
 [Back to top](#content)
 
