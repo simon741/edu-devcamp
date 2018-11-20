@@ -57,7 +57,7 @@ An instance of Application Insights can be created in a variety of ways, includi
 
     ![image](./media/2018-11-20-12-02-00.jpg)
 
-1. Click `Register`.The setup by Visual Studio will take a few minutes.
+1. Click `Register`. The setup by Visual Studio will take a few minutes.
 
     ![image](./media/2018-11-20-10-58-00.jpg)
 
@@ -65,7 +65,7 @@ An instance of Application Insights can be created in a variety of ways, includi
 
     ![image](./media/2018-11-20-10-59-00.jpg)
 
-1. Application Insights is now completely configured.
+1. When Visual Studio is finished Application Insights will be completely configured.
 
     ![image](./media/2018-11-20-11-00-00.jpg)
 
@@ -73,11 +73,11 @@ An instance of Application Insights can be created in a variety of ways, includi
 
     ![image](./media/2018-11-20-11-01-00.jpg)
 
-1. The `ApplicationInsights.config` in your project contains the `Instrumentation Key`.
+1. The `ApplicationInsights.config` in your project contains the `Instrumentation Key`. The Instrumentation Key is important, as it is the link that ties an application to the AI service. It can be found in the Azure Portal and you can add it to your web applications. In this case Visual Studio did it for you.
 
     ![image](./media/2018-11-20-11-45-00.jpg)
 
-We now have an instance of Application Insights created and ready for data gathering. The Instrumentation Key is important, as it is the link that ties an application to the AI service.
+We now have an instance of Application Insights created and ready for data gathering.
 
 The integration was done automatically by Visual Studio. When you are creating an ASP.NET web application **hosted** in Azure you can simply activate monitoring via the Azure Portal and don't have to touch your code at all.
 
@@ -137,7 +137,11 @@ You can use the `Metric Explorer` to create custom views on the gathered data. A
 
     ![image](./media/2018-11-19-16-51-00.jpg)
 
-1. Click the `Classic explorer` link on the top. The classic explorer does not only show you graphs but lists all events individually. In the list of events you will be able to find the custom `Contacted` event you added to your code.
+1. Click the `Classic explorer` link on the top. Click on the empty chart next which will lead you to the Search page where you can configure and save your own charts.
+
+    ![image](./media/2018-11-20-13-16-00.jpg)
+
+1. The classic explorer does not only show you graphs but lists all events individually. In the list of events you will be able to find the custom `Contacted` event you added to your code.
 
     ![image](./media/2018-11-20-10-44-00.jpg)
 
