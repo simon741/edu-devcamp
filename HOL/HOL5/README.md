@@ -34,7 +34,7 @@ Coming soon...
 
 ## Continue with lab 6
 
-You are now ready to start hands-on lab 6. [View HOL 6 instructions](../HOL5).
+You are now ready to start hands-on lab 6. [View HOL 6 instructions](../HOL6).
 
 [Back to top](#content)
 
