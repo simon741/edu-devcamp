@@ -43,7 +43,7 @@ In this lab, you will learn how to create an Azure bot, make it available in Tea
 
     ![image](./media/2018-09-19-13-12-00.jpg)
 
-1. Select the `Web App Bot` from the results.
+1. Select the `Web App Bot` from the results and click `Create`.
 
 1. In the `Bot Service blade`, provide the required information, and click `Create`. This creates and deploys the bot service and LUIS app to Azure.
 
@@ -51,7 +51,7 @@ In this lab, you will learn how to create an Azure bot, make it available in Tea
 
     1. Select the `subscription`, `resource group`, `App service plan`, and `location`.
 
-    1. Select the `Language understanding (Node.js)` template for the `Bot template` field.
+    1. Select the `Language understanding (Node.js)` template for the `Bot template` field by switching to `SDK v3` and `Node.js` on the selection tab.
 
     1. Note that Azure will automatically create a storage and an App ID for your bot.
 
@@ -85,7 +85,7 @@ Your bot is now running and can recognize some basic intents. Please note that d
 
 ## Exercise 3: Modify the LUIS app<a name="ex3"></a>
 
-1. Log in to [www.luis.ai/applications](https://www.luis.ai/applications) using the same account you use to log in to Azure. Click on `My apps` if you are not redirected automatically. In the list of apps, find the app that begins with the name specified in `App name` in the Bot Service blade when you created the Bot Service.
+1. Log in to [www.luis.ai/applications](https://www.luis.ai/applications) using the same account you use to log in to Azure. Click on `My apps` if you are not redirected automatically. In the list of apps, find the app that begins with the name specified in `App name` in the Bot Service blade when you created the Bot Service. Note: If the LUIS page does not list your bot delete it and create a new bot.
 
     ![image](./media/2018-09-19-12-53-00.jpg)
 
@@ -150,7 +150,7 @@ Your LUIS app now distinguishes between more intents. Next you are going to modi
 
 ### Handle the Note.Create intent<a name="ex4b"></a>
 
-1. When the LUIS app recognizes a note creation intent the bot has to react by interacting with the student to gather all the necessary data. A new dialog will do this .Copy the following code and paste it at the end of `app.js`:
+1. When the LUIS app recognizes a note creation intent the bot has to react by interacting with the student to gather all the necessary data. A new dialog will do this. Copy the following code and paste it at the end of `app.js`:
 
     ```javascript
     // CreateNote dialog
@@ -530,19 +530,23 @@ Your LUIS app now distinguishes between more intents. Next you are going to modi
 
     ![image](./media/2018-09-20-10-47-00.jpg)
 
+1. Click `Save`.
+
+    ![image](./media/2018-11-21-13-22-00.jpg)
+
 1. Agree to the `Terms of Service` by checking the box and click `Agree`.
 
     ![image](./media/2018-09-20-10-48-00.jpg)
 
-1. You will be returned to the channel list where the new channel will be listed. Click the name of the channel.
+1. Return to the channel list (by selecting another entry on the menu and then `Channels`) where the new channel will be listed. Click the name of the channel.
 
     ![image](./media/2018-09-20-10-40-00.jpg)
 
-1. This will launch the bot in the teams client.
+1. This will launch the bot in the teams client. The bot is only previewing it has not been fully installed.
 
     ![image](./media/2018-09-20-11-20-00.jpg)
 
-1. Using the `Get bot embed codes` button you can create a link that can be used by users to integrate the bot in their Teams client.
+1. Using the `Get bot embed codes` button below the list of channels you can create a link that can be used by users to integrate the bot in their Teams client.
 
     ![image](./media/2018-09-20-11-29-00.jpg)
 
@@ -570,7 +574,7 @@ To create a manifest file that can be uploaded by the users:
 
     ![image](./media/2018-06-29-10-05-00.jpg)
 
-1. On the welcome screen click `Create a new app`.
+1. On the welcome screen of the `Manifest editor` tab click `Create a new app`.
 
     ![image](./media/2018-06-29-10-08-00.jpg)
 
@@ -590,11 +594,11 @@ To create a manifest file that can be uploaded by the users:
 
     ![image](./media/2018-09-20-11-57-00.jpg)
 
-1. Choose the `Existing bot` tab and enter the `Name` and `Microsoft App ID` of your bot. These have to match the values you looked up previously. Choose `Personal` as the `Scope` of the bot since it is targeted at individual students and not a certain team.
+1. Choose the `Existing bot` tab and enter the `Name` and `Microsoft App ID` of your bot. These have to match the values you looked up previously. If you are logged into Teams with the same account that created the bot in Azure you will have the option to select your bot from a drop-down list. Choose `Personal` as the `Scope` of the bot since it is targeted at individual students and not a certain team.
 
     ![image](./media/2018-09-20-12-05-00.jpg)
 
-1. Go to `Valid domains` next, enter the URL and click `Add`.
+1. Go to `Valid domains` next, enter the URL of your bot and click `Add`.
 
     ![image](./media/2018-09-20-12-08-00.jpg)
 
