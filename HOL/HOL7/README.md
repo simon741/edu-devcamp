@@ -145,11 +145,11 @@ You now have an improved predictive model.
 
 ---
 
-## Exercise 3:Set up a web service<a name="ex3"></a>
+## Exercise 3: Set up a web service<a name="ex3"></a>
 
 Microsoft Azure Machine Learning Studio let's you set up a web service based on a trained model with just a few clicks.
 
-1. Clean up your experiment by removing the `Linear Regression` operation.
+1. Clean up your experiment by removing the `Linear Regression` operation and pressing `RUN` again.
 
     ![image](./media/2018-09-13-16-52-00.jpg)
 
