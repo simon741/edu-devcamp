@@ -167,8 +167,8 @@ The 30 day Azure free trial will be used in the hands-on labs to host content in
 
     ![image](./media/2018-08-16-09-02-00.jpg)
 
+> If you want to start all over again to sign up for the Azure free trial, you can do so in the Azure portal. Sign in to https://portal.azure.com and select `Cost Management + Billing` from the navigation. Click `Subscriptions` in the menu and click `+ New subscription` at the top of the blade. On the next page select `Free trial` and start again with [Exercise 3: Set up Azure free trial subscription](#ex3).
 
-	
 [Back to top](#content)
 
 ---
