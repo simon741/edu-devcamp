@@ -155,7 +155,7 @@ The 30 day Azure free trial will be used in the hands-on labs to host content in
 
     ![image](./media/2018-07-18-15-41-30.jpg)
 
-1. Complete the form and be sure to use the e-mail address you created in [Exercise 1](#ex1) for your Office 365 Educational trial subscription. **You will need a valid credit card in the third step `Identity verification by card` for the `Country/Region` you select here.** Click `Next`.
+1. Complete the form and be sure to use the e-mail address you created in [Exercise 1](#ex1) for your Office 365 Educational trial subscription. **You will need a valid credit card in the third step** `Identity verification by card` **for the** `Country/Region` **you select here.** To continue, click `Next`.
 
     ![image](./media/2018-07-18-15-43-00.jpg)
 
