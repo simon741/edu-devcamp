@@ -23,7 +23,7 @@ In this lab, you will set up an Office 365 Educational trial subscription, popul
 
 ## Prerequisites<a name="prerequisites"></a>
 
-* You will need a cell phone for identity verification.
+* You will need a cell phone and a credit card for identity verification.
 
 [Back to top](#content)
 
