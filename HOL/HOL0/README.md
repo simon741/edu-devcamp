@@ -104,7 +104,7 @@ In this lab, you will set up an Office 365 Educational trial subscription, popul
 
 ## Exercise 2: Set up demo data in the School Data Sync Admin Portal<a name="ex2"></a>
 
-1. Download these CSV files containing the demo data: [School](./assests/School.csv), [Section](./assests/Section.csv), [Student](./assests/Student.csv), [Student Enrollment](./assests/StudentEnrollment.csv), [Teacher](./assests/Teacher.csv) [Teacher Roster](./assests/TeacherRoster.csv). If you have downloaded the Dev Camp content you can find the files in the folder `HOL/HOL0/assets/`.
+1. Download these CSV files containing the demo data: [School](./assests/School.csv), [Section](./assests/Section.csv), [Student](./assests/Student.csv), [Student Enrollment](./assests/StudentEnrollment.csv), [Teacher](./assests/Teacher.csv) and [Teacher Roster](./assests/TeacherRoster.csv). If you have downloaded the Dev Camp content you can find the files in the folder `HOL/HOL0/assets/`.
 
 1. To access the School Data Sync Admin Portal launch a private web browser, navigate to [sds.microsoft.com](https://sds.microsoft.com), click `Sign-In`, then enter your O365 Global Admin account credentials.
 
@@ -157,6 +157,8 @@ The 30 day Azure free trial will be used in the hands-on labs to host content in
 
 1. Complete the form and be sure to use the e-mail address you created in [Exercise 1](#ex1) for your Office 365 Educational trial subscription. Click `Next`.
 
+> You will need a valid credit card in the third step for the `Country/Region` you select here.
+
     ![image](./media/2018-07-18-15-43-00.jpg)
 
 1. Enter your phone number and click `Text me`. Enter the verification code that you receive via SMS and click `Verify code`.
@@ -167,6 +169,8 @@ The 30 day Azure free trial will be used in the hands-on labs to host content in
 
     ![image](./media/2018-08-16-09-02-00.jpg)
 
+
+	
 [Back to top](#content)
 
 ---
