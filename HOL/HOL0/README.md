@@ -87,6 +87,14 @@ In this lab, you will set up an Office 365 Educational trial subscription, popul
 1. It may take a few minutes before you can access the SDS page.
 
     ![image](./media/2018-06-28-10-48-00.jpg)
+	
+1. If you are unable to sign in to School Data Sync, you probably don't have a license attached to your user account yet.
+
+    ![image](./media/ex1-sds-no-license.png)
+
+1. Go back to the Office 365 Admin center and click `Users` > `Active users` in the menu and select your user account. In the row `Product licenses` click `Edit` and activate the `School Data Sync` license below `Office 365 A5 for faculty`.
+
+    ![image](./media/ex1-sds-activate-license.png)
 
 [Back to top](#content)
 
