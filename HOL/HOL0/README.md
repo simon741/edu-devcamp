@@ -167,7 +167,7 @@ The 30 day Azure free trial will be used in the hands-on labs to host content in
 
     ![image](./media/2018-08-16-09-02-00.jpg)
 
-> If you want to start all over again to sign up for the Azure free trial, you can do so in the Azure portal. Sign in to https://portal.azure.com and select `Cost Management + Billing` from the navigation. Click `Subscriptions` in the menu and click `+ New subscription` at the top of the blade. On the next page select `Free trial` and start again with [Exercise 3: Set up Azure free trial subscription](#ex3).
+> If you want to start all over again to sign up for the Azure free trial, you can do so in the Azure portal. Sign in to https://portal.azure.com and select `Cost Management + Billing` from the navigation. Click `Subscriptions` in the menu and click `+ New subscription` at the top of the blade. On the next page select `Free trial` and start again with step 2. of [Exercise 3: Set up Azure free trial subscription](#ex3).
 
 [Back to top](#content)
 
@@ -176,7 +176,7 @@ The 30 day Azure free trial will be used in the hands-on labs to host content in
 ## Exercise 4: Provision a virtual machine for development<a name="ex4"></a>
 To follow the programming examples in the upcoming hands-on labs you will need a machine running Microsoft Visual Studio. In this exercise you will provision a virtual machine in Azure that has Visual Studio 2017 already installed.
 
-1. Open a InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge and Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome) and browse to [portal.azure.com](https://portal.azure.com) and sign in using the e-mail address used in the previous exercise.
+1. Open an InPrivate or Incognito browser window (`Ctrl + Shift + P` in Edge, Internet Explorer and Firefox or `Ctrl + Shift + N` in Google Chrome), browse to [portal.azure.com](https://portal.azure.com) and sign in using the e-mail address used in the previous exercise.
 
 1. Click `Create a resource` in the menu on the left.
 
@@ -186,11 +186,11 @@ To follow the programming examples in the upcoming hands-on labs you will need a
 
     ![image](./media/2018-07-18-15-39-00.jpg)
 
-1. From the results select `Visual Studio Community 2017 (latest preview) on Windows Server 2016 (x64)` and click `Create` on the bottom of the page.
+1. From the results select `Visual Studio Community 2017 (latest preview) on Windows Server 2016 (x64)` and click `Create` at the bottom of the page.
 
     ![image](./media/2018-08-30-13-18-00.jpg)
 
-1. Assign a name to your virtual machine and to the resource group that will be created along with the virtual machine. Enter your username and choose a password. Select `RDP` as the available inbound port. Use your free trial as the subscription. Click `Management` at the top of the page.
+1. Under `Subscription`, use your free trial. Also assign a name to your virtual machine and to the resource group that will be created along with the virtual machine. Enter your username and choose a password. Then select `RDP` as the available inbound port. To continue, click `Management` at the top of the page.
 
     ![image](./media/2018-08-30-16-27-00.jpg)
 
